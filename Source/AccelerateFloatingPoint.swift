@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol AccelerateFloatingPoint {
+public protocol AccelerateFloatingPoint: FloatingPointType, FloatLiteralConvertible {
     
     // MARK: Arithmetic
     

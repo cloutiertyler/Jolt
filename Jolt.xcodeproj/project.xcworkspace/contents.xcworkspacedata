@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Surge.xcodeproj">
+      location = "self:/Users/tylercloutier/Developer/Surge/Jolt.xcodeproj">
    </FileRef>
 </Workspace>

@@ -24,8 +24,8 @@
 #import <Accelerate/Accelerate.h>
 
 //! Project version number for Surge.
-FOUNDATION_EXPORT double SurgeVersionNumber;
+FOUNDATION_EXPORT double JoltVersionNumber;
 
-//! Project version string for Surge.
-FOUNDATION_EXPORT const unsigned char SurgeVersionString[];
+//! Project version string for Jolt.
+FOUNDATION_EXPORT const unsigned char JoltVersionString[];
 

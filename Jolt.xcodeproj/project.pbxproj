@@ -17,7 +17,7 @@
 		F8A1E1CD19917B0A009735E2 /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C619917B0A009735E2 /* Exponential.swift */; };
 		F8A1E1CE19917B0A009735E2 /* Hyperbolic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */; };
 		F8A1E1CF19917B0A009735E2 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C819917B0A009735E2 /* Power.swift */; };
-		F8A1E1D019917B0A009735E2 /* Surge.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A1E1C919917B0A009735E2 /* Surge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8A1E1D019917B0A009735E2 /* Jolt.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A1E1C919917B0A009735E2 /* Jolt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8A1E1D119917B0A009735E2 /* Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1CA19917B0A009735E2 /* Trigonometric.swift */; };
 		F8A1E1D519917C25009735E2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A1E1D219917C0B009735E2 /* Accelerate.framework */; };
 		F8A1E1D719917C2B009735E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A1E1D619917C2B009735E2 /* Foundation.framework */; };
@@ -46,16 +46,16 @@
 		DC9BF1521C4DFD9800AFDEC2 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
 		DC9BF1541C4DFDA200AFDEC2 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		E65C5BE319FF9CF600149FF1 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
-		F84A6AAE19A9A72F007B53E1 /* SurgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84A6AAE19A9A72F007B53E1 /* Jolt.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jolt.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84A6AB119A9A72F007B53E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8A1E1AA19917A79009735E2 /* Surge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Surge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A1E1AA19917A79009735E2 /* Jolt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Jolt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A1E1AE19917A79009735E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8A1E1C419917B0A009735E2 /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
 		F8A1E1C519917B0A009735E2 /* Auxiliary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auxiliary.swift; sourceTree = "<group>"; };
 		F8A1E1C619917B0A009735E2 /* Exponential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exponential.swift; sourceTree = "<group>"; };
 		F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hyperbolic.swift; sourceTree = "<group>"; };
 		F8A1E1C819917B0A009735E2 /* Power.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
-		F8A1E1C919917B0A009735E2 /* Surge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surge.h; sourceTree = "<group>"; };
+		F8A1E1C919917B0A009735E2 /* Jolt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jolt.h; sourceTree = "<group>"; };
 		F8A1E1CA19917B0A009735E2 /* Trigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigonometric.swift; sourceTree = "<group>"; };
 		F8A1E1D219917C0B009735E2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		F8A1E1D619917C2B009735E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -125,8 +125,8 @@
 		F8A1E1AB19917A79009735E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8A1E1AA19917A79009735E2 /* Surge.framework */,
-				F84A6AAE19A9A72F007B53E1 /* SurgeTests.xctest */,
+				F8A1E1AA19917A79009735E2 /* Jolt.framework */,
+				F84A6AAE19A9A72F007B53E1 /* Jolt.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 		F8A1E1C319917B0A009735E2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F8A1E1C919917B0A009735E2 /* Surge.h */,
+				F8A1E1C919917B0A009735E2 /* Jolt.h */,
 				DC9BF1501C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift */,
 				DC9BF1521C4DFD9800AFDEC2 /* Float.swift */,
 				DC9BF1541C4DFDA200AFDEC2 /* Double.swift */,
@@ -186,16 +186,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A1E1D019917B0A009735E2 /* Surge.h in Headers */,
+				F8A1E1D019917B0A009735E2 /* Jolt.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F84A6AAD19A9A72F007B53E1 /* SurgeTests */ = {
+		F84A6AAD19A9A72F007B53E1 /* JoltTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "SurgeTests" */;
+			buildConfigurationList = F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "JoltTests" */;
 			buildPhases = (
 				F84A6AAA19A9A72F007B53E1 /* Sources */,
 				F84A6AAB19A9A72F007B53E1 /* Frameworks */,
@@ -206,14 +206,14 @@
 			dependencies = (
 				F84A6AB819A9A771007B53E1 /* PBXTargetDependency */,
 			);
-			name = SurgeTests;
+			name = JoltTests;
 			productName = SurgeTests;
-			productReference = F84A6AAE19A9A72F007B53E1 /* SurgeTests.xctest */;
+			productReference = F84A6AAE19A9A72F007B53E1 /* Jolt.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F8A1E1A919917A79009735E2 /* Surge */ = {
+		F8A1E1A919917A79009735E2 /* Jolt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8A1E1BD19917A79009735E2 /* Build configuration list for PBXNativeTarget "Surge" */;
+			buildConfigurationList = F8A1E1BD19917A79009735E2 /* Build configuration list for PBXNativeTarget "Jolt" */;
 			buildPhases = (
 				F8A1E1A519917A79009735E2 /* Sources */,
 				F8A1E1A619917A79009735E2 /* Frameworks */,
@@ -224,9 +224,9 @@
 			);
 			dependencies = (
 			);
-			name = Surge;
+			name = Jolt;
 			productName = Surge;
-			productReference = F8A1E1AA19917A79009735E2 /* Surge.framework */;
+			productReference = F8A1E1AA19917A79009735E2 /* Jolt.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -248,7 +248,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F8A1E1A419917A79009735E2 /* Build configuration list for PBXProject "Surge" */;
+			buildConfigurationList = F8A1E1A419917A79009735E2 /* Build configuration list for PBXProject "Jolt" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -260,8 +260,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8A1E1A919917A79009735E2 /* Surge */,
-				F84A6AAD19A9A72F007B53E1 /* SurgeTests */,
+				F8A1E1A919917A79009735E2 /* Jolt */,
+				F84A6AAD19A9A72F007B53E1 /* JoltTests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,7 +321,7 @@
 /* Begin PBXTargetDependency section */
 		F84A6AB819A9A771007B53E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8A1E1A919917A79009735E2 /* Surge */;
+			target = F8A1E1A919917A79009735E2 /* Jolt */;
 			targetProxy = F84A6AB719A9A771007B53E1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -342,7 +342,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Jolt;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/SurgeTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -359,7 +359,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Jolt;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/SurgeTests-Bridging-Header.h";
 			};
 			name = Release;
@@ -460,8 +460,8 @@
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mattt.Surge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theartofengineering.Jolt;
+				PRODUCT_NAME = Jolt;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -476,8 +476,8 @@
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mattt.Surge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theartofengineering.Jolt;
+				PRODUCT_NAME = Jolt;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -485,7 +485,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "SurgeTests" */ = {
+		F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "JoltTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F84A6AB519A9A72F007B53E1 /* Debug */,
@@ -494,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8A1E1A419917A79009735E2 /* Build configuration list for PBXProject "Surge" */ = {
+		F8A1E1A419917A79009735E2 /* Build configuration list for PBXProject "Jolt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8A1E1BB19917A79009735E2 /* Debug */,
@@ -503,7 +503,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8A1E1BD19917A79009735E2 /* Build configuration list for PBXNativeTarget "Surge" */ = {
+		F8A1E1BD19917A79009735E2 /* Build configuration list for PBXNativeTarget "Jolt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8A1E1BE19917A79009735E2 /* Debug */,

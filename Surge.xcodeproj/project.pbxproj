@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC9BF1471C4DCA6E00AFDEC2 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1461C4DCA6E00AFDEC2 /* Vector.swift */; };
+		DC9BF1511C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1501C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift */; };
+		DC9BF1531C4DFD9800AFDEC2 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1521C4DFD9800AFDEC2 /* Float.swift */; };
+		DC9BF1551C4DFDA200AFDEC2 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1541C4DFDA200AFDEC2 /* Double.swift */; };
 		E65C5BE419FF9CF600149FF1 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C5BE319FF9CF600149FF1 /* Matrix.swift */; };
 		F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C419917B0A009735E2 /* Arithmetic.swift */; };
 		F8A1E1CC19917B0A009735E2 /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C519917B0A009735E2 /* Auxiliary.swift */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC9BF1461C4DCA6E00AFDEC2 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		DC9BF1501C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerateFloatingPoint.swift; sourceTree = "<group>"; };
+		DC9BF1521C4DFD9800AFDEC2 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
+		DC9BF1541C4DFDA200AFDEC2 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		E65C5BE319FF9CF600149FF1 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		F84A6AAE19A9A72F007B53E1 /* SurgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84A6AB119A9A72F007B53E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,13 +153,17 @@
 			isa = PBXGroup;
 			children = (
 				F8A1E1C919917B0A009735E2 /* Surge.h */,
+				DC9BF1501C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift */,
+				DC9BF1521C4DFD9800AFDEC2 /* Float.swift */,
+				DC9BF1541C4DFDA200AFDEC2 /* Double.swift */,
 				F8A1E1C419917B0A009735E2 /* Arithmetic.swift */,
+				DC9BF1461C4DCA6E00AFDEC2 /* Vector.swift */,
+				E65C5BE319FF9CF600149FF1 /* Matrix.swift */,
+				F8A1E1C819917B0A009735E2 /* Power.swift */,
 				F8A1E1C519917B0A009735E2 /* Auxiliary.swift */,
 				F8A1E1C619917B0A009735E2 /* Exponential.swift */,
 				F8AE90FD19D1D9120078C7B2 /* FFT.swift */,
 				F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */,
-				E65C5BE319FF9CF600149FF1 /* Matrix.swift */,
-				F8A1E1C819917B0A009735E2 /* Power.swift */,
 				F8A1E1CA19917B0A009735E2 /* Trigonometric.swift */,
 			);
 			path = Source;
@@ -289,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9BF1531C4DFD9800AFDEC2 /* Float.swift in Sources */,
 				F8A1E1D119917B0A009735E2 /* Trigonometric.swift in Sources */,
 				F8A1E1CE19917B0A009735E2 /* Hyperbolic.swift in Sources */,
 				F8A1E1CC19917B0A009735E2 /* Auxiliary.swift in Sources */,
@@ -296,7 +309,10 @@
 				E65C5BE419FF9CF600149FF1 /* Matrix.swift in Sources */,
 				F8AE90FE19D1D9120078C7B2 /* FFT.swift in Sources */,
 				F8A1E1CD19917B0A009735E2 /* Exponential.swift in Sources */,
+				DC9BF1471C4DCA6E00AFDEC2 /* Vector.swift in Sources */,
 				F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */,
+				DC9BF1551C4DFDA200AFDEC2 /* Double.swift in Sources */,
+				DC9BF1511C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +460,7 @@
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattt.Surge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -460,7 +476,7 @@
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattt.Surge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

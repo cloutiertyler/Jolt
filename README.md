@@ -26,7 +26,7 @@ Well because those are silly.
 Initial benchmarks on iOS devices and the iOS simulator indicate significant performance improvements over a conventional Swift implementation.
 
 ```swift
-import Surge
+import Jolt
 
 let numbers: [Double] = ...
 var sum: Double = 0.0
@@ -34,8 +34,8 @@ var sum: Double = 0.0
 // Naïve Swift Implementation
 sum = reduce(numbers, 0.0, +)
 
-// Surge Implementation
-sum = Surge.sum(numbers)
+// Jolt Implementation
+sum = Double.sum(numbers)
 ```
 
 _(Time in milliseconds, Optimization Level `-Ofast`)_
@@ -46,17 +46,17 @@ _(Time in milliseconds, Optimization Level `-Ofast`)_
 | 100000     | 251.037254       | 0.028687      | ~9000x    |
 | 100000000  | 239474.689326    | 57.009841     | ~4000x    |
 
-> Surge's performance characteristics have not yet been thoroughly evaluated, though initial benchmarks show incredible promise. Further investigation is definitely warranted.
+> Jolt's performance characteristics have not yet been thoroughly evaluated, though initial benchmarks show incredible promise. Further investigation is definitely warranted.
 
 ## Installation
 
-_The infrastructure and best practices for distributing Swift libraries are currently in flux during this beta period of Swift & Xcode. In the meantime, you can add Surge as a git submodule, drag the `Surge.xcodeproj` file into your Xcode project, and add `Surge.framework` as a dependency for your target._
+_The infrastructure and best practices for distributing Swift libraries are currently in flux during this beta period of Swift & Xcode. In the meantime, you can add Jolt as a git submodule, drag the `Jolt.xcodeproj` file into your Xcode project, and add `Jolt.framework` as a dependency for your target._
 
 ---
 
 ## Inventory
 
-> Surge functions are named according to their corresponding "Math.h" functions, where applicable (omitting `f` and `d` affixes, since type information is communicated and enforced by the language's type system).
+> Jolt functions are named according to their corresponding "Math.h" functions, where applicable (omitting `f` and `d` affixes, since type information is communicated and enforced by the language's type system).
 
 ### Arithmetic
 
@@ -137,18 +137,18 @@ _The infrastructure and best practices for distributing Swift libraries are curr
 import Surge
 
 let n = [1.0, 2.0, 3.0, 4.0, 5.0]
-let sum = Surge.sum(n) // 15.0
+let sum = Double.sum(n) // 15.0
 ```
 
 ### Computing Product of Two `[Double]`s
 
 ```swift
-import Surge
+import Jolt
 
 let a = [1.0, 3.0, 5.0, 7.0]
 let b = [2.0, 4.0, 6.0, 8.0]
 
-let product = Surge.mul(a, b) // [2.0, 12.0, 30.0, 56.0]
+let product = Double.mul(a, b) // [2.0, 12.0, 30.0, 56.0]
 ```
 
 ---

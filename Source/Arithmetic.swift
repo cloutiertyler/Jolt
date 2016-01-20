@@ -136,7 +136,7 @@ public extension CollectionType where Generator.Element: AccelerateFloatingPoint
         return Generator.Element.remainder(Array(self), y: y)
     }
 
-    public func sqrt() -> [Generator.Element] {
+    public func sqrted() -> [Generator.Element] {
         return Generator.Element.sqrt(Array(self))
     }
     

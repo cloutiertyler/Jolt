@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 import Foundation
-import Surge
+import Jolt
 import XCTest
 
 class TrigonometricTests: XCTestCase {

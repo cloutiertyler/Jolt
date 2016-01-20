@@ -52,6 +52,8 @@ public protocol AccelerateFloatingPoint: FloatingPointType, FloatLiteralConverti
     
     static func add(x: [Self], y: [Self]) -> [Self]
     
+    static func sub(x: [Self], y: [Self]) -> [Self]
+    
     static func mul(x: [Self], y: [Self]) -> [Self]
     
     static func div(x: [Self], y: [Self]) -> [Self]

@@ -80,6 +80,15 @@ extension Double: AccelerateFloatingPoint {
         return results
     }
     
+    // MARK: Sub
+    
+    public static func sub(x: [Double], y: [Double]) -> [Double] {
+        var results = [Double](x)
+        cblas_daxpy(Int32(y.count), -1.0, y, 1, &results, 1)
+        
+        return results
+    }
+    
     // MARK: Multiply
     
     public static func mul(x: [Double], y: [Double]) -> [Double] {

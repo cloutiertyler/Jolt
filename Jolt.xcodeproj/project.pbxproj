@@ -11,6 +11,8 @@
 		DC9BF1511C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1501C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift */; };
 		DC9BF1531C4DFD9800AFDEC2 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1521C4DFD9800AFDEC2 /* Float.swift */; };
 		DC9BF1551C4DFDA200AFDEC2 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1541C4DFDA200AFDEC2 /* Double.swift */; };
+		DC9BF1751C4E3D8E00AFDEC2 /* ArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1741C4E3D8E00AFDEC2 /* ArithmeticTests.swift */; };
+		DC9BF1771C4E3D8E00AFDEC2 /* Jolt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A1E1AA19917A79009735E2 /* Jolt.framework */; };
 		E65C5BE419FF9CF600149FF1 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C5BE319FF9CF600149FF1 /* Matrix.swift */; };
 		F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C419917B0A009735E2 /* Arithmetic.swift */; };
 		F8A1E1CC19917B0A009735E2 /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C519917B0A009735E2 /* Auxiliary.swift */; };
@@ -22,21 +24,15 @@
 		F8A1E1D519917C25009735E2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A1E1D219917C0B009735E2 /* Accelerate.framework */; };
 		F8A1E1D719917C2B009735E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A1E1D619917C2B009735E2 /* Foundation.framework */; };
 		F8AE90FE19D1D9120078C7B2 /* FFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE90FD19D1D9120078C7B2 /* FFT.swift */; };
-		F8BD5C591A6C1C6500DD357E /* ArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BD5C531A6C1C6500DD357E /* ArithmeticTests.swift */; };
-		F8BD5C5A1A6C1C6500DD357E /* AuxiliaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BD5C541A6C1C6500DD357E /* AuxiliaryTests.swift */; };
-		F8BD5C5B1A6C1C6500DD357E /* ExponentialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BD5C551A6C1C6500DD357E /* ExponentialTests.swift */; };
-		F8BD5C5C1A6C1C6500DD357E /* HyperbolicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BD5C561A6C1C6500DD357E /* HyperbolicTests.swift */; };
-		F8BD5C5D1A6C1C6500DD357E /* TrigonometricTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BD5C571A6C1C6500DD357E /* TrigonometricTests.swift */; };
-		F8BD5C5E1A6C1C6500DD357E /* XCTestCase+Surge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BD5C581A6C1C6500DD357E /* XCTestCase+Surge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F84A6AB719A9A771007B53E1 /* PBXContainerItemProxy */ = {
+		DC9BF1781C4E3D8E00AFDEC2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F8A1E1A119917A79009735E2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F8A1E1A919917A79009735E2;
-			remoteInfo = Surge;
+			remoteInfo = Jolt;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -45,9 +41,10 @@
 		DC9BF1501C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerateFloatingPoint.swift; sourceTree = "<group>"; };
 		DC9BF1521C4DFD9800AFDEC2 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
 		DC9BF1541C4DFDA200AFDEC2 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		DC9BF1721C4E3D8E00AFDEC2 /* JoltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC9BF1741C4E3D8E00AFDEC2 /* ArithmeticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticTests.swift; sourceTree = "<group>"; };
+		DC9BF1761C4E3D8E00AFDEC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E65C5BE319FF9CF600149FF1 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
-		F84A6AAE19A9A72F007B53E1 /* Jolt.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jolt.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F84A6AB119A9A72F007B53E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8A1E1AA19917A79009735E2 /* Jolt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Jolt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A1E1AE19917A79009735E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8A1E1C419917B0A009735E2 /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
@@ -60,20 +57,14 @@
 		F8A1E1D219917C0B009735E2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		F8A1E1D619917C2B009735E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F8AE90FD19D1D9120078C7B2 /* FFT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFT.swift; sourceTree = "<group>"; };
-		F8BD5C521A6C1C6400DD357E /* SurgeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SurgeTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		F8BD5C531A6C1C6500DD357E /* ArithmeticTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArithmeticTests.swift; sourceTree = "<group>"; };
-		F8BD5C541A6C1C6500DD357E /* AuxiliaryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuxiliaryTests.swift; sourceTree = "<group>"; };
-		F8BD5C551A6C1C6500DD357E /* ExponentialTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExponentialTests.swift; sourceTree = "<group>"; };
-		F8BD5C561A6C1C6500DD357E /* HyperbolicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HyperbolicTests.swift; sourceTree = "<group>"; };
-		F8BD5C571A6C1C6500DD357E /* TrigonometricTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigonometricTests.swift; sourceTree = "<group>"; };
-		F8BD5C581A6C1C6500DD357E /* XCTestCase+Surge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Surge.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F84A6AAB19A9A72F007B53E1 /* Frameworks */ = {
+		DC9BF16F1C4E3D8E00AFDEC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9BF1771C4E3D8E00AFDEC2 /* Jolt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,34 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F84A6AAF19A9A72F007B53E1 /* Tests */ = {
+		DC9BF1731C4E3D8E00AFDEC2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F8BD5C531A6C1C6500DD357E /* ArithmeticTests.swift */,
-				F8BD5C541A6C1C6500DD357E /* AuxiliaryTests.swift */,
-				F8BD5C551A6C1C6500DD357E /* ExponentialTests.swift */,
-				F8BD5C561A6C1C6500DD357E /* HyperbolicTests.swift */,
-				F8BD5C571A6C1C6500DD357E /* TrigonometricTests.swift */,
-				F8BD5C581A6C1C6500DD357E /* XCTestCase+Surge.swift */,
-				F84A6AB019A9A72F007B53E1 /* Supporting Files */,
-				F8BD5C521A6C1C6400DD357E /* SurgeTests-Bridging-Header.h */,
+				DC9BF1741C4E3D8E00AFDEC2 /* ArithmeticTests.swift */,
+				DC9BF1761C4E3D8E00AFDEC2 /* Info.plist */,
 			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		F84A6AB019A9A72F007B53E1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F84A6AB119A9A72F007B53E1 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Tests;
+			path = JoltTests;
 			sourceTree = "<group>";
 		};
 		F8A1E1A019917A79009735E2 = {
 			isa = PBXGroup;
 			children = (
 				F8A1E1AC19917A79009735E2 /* Source */,
-				F84A6AAF19A9A72F007B53E1 /* Tests */,
+				DC9BF1731C4E3D8E00AFDEC2 /* Tests */,
 				F8A1E1D419917C17009735E2 /* Frameworks */,
 				F8A1E1AB19917A79009735E2 /* Products */,
 			);
@@ -126,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				F8A1E1AA19917A79009735E2 /* Jolt.framework */,
-				F84A6AAE19A9A72F007B53E1 /* Jolt.xctest */,
+				DC9BF1721C4E3D8E00AFDEC2 /* JoltTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,22 +171,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F84A6AAD19A9A72F007B53E1 /* JoltTests */ = {
+		DC9BF1711C4E3D8E00AFDEC2 /* JoltTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "JoltTests" */;
+			buildConfigurationList = DC9BF17A1C4E3D8E00AFDEC2 /* Build configuration list for PBXNativeTarget "JoltTests" */;
 			buildPhases = (
-				F84A6AAA19A9A72F007B53E1 /* Sources */,
-				F84A6AAB19A9A72F007B53E1 /* Frameworks */,
-				F84A6AAC19A9A72F007B53E1 /* Resources */,
+				DC9BF16E1C4E3D8E00AFDEC2 /* Sources */,
+				DC9BF16F1C4E3D8E00AFDEC2 /* Frameworks */,
+				DC9BF1701C4E3D8E00AFDEC2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F84A6AB819A9A771007B53E1 /* PBXTargetDependency */,
+				DC9BF1791C4E3D8E00AFDEC2 /* PBXTargetDependency */,
 			);
 			name = JoltTests;
-			productName = SurgeTests;
-			productReference = F84A6AAE19A9A72F007B53E1 /* Jolt.xctest */;
+			productName = JoltTests;
+			productReference = DC9BF1721C4E3D8E00AFDEC2 /* JoltTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F8A1E1A919917A79009735E2 /* Jolt */ = {
@@ -236,12 +214,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0710;
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Mattt Thompson";
 				TargetAttributes = {
-					F84A6AAD19A9A72F007B53E1 = {
-						CreatedOnToolsVersion = 6.0;
+					DC9BF1711C4E3D8E00AFDEC2 = {
+						CreatedOnToolsVersion = 7.2;
 					};
 					F8A1E1A919917A79009735E2 = {
 						CreatedOnToolsVersion = 6.0;
@@ -261,13 +239,13 @@
 			projectRoot = "";
 			targets = (
 				F8A1E1A919917A79009735E2 /* Jolt */,
-				F84A6AAD19A9A72F007B53E1 /* JoltTests */,
+				DC9BF1711C4E3D8E00AFDEC2 /* JoltTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F84A6AAC19A9A72F007B53E1 /* Resources */ = {
+		DC9BF1701C4E3D8E00AFDEC2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -284,16 +262,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F84A6AAA19A9A72F007B53E1 /* Sources */ = {
+		DC9BF16E1C4E3D8E00AFDEC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8BD5C5C1A6C1C6500DD357E /* HyperbolicTests.swift in Sources */,
-				F8BD5C5A1A6C1C6500DD357E /* AuxiliaryTests.swift in Sources */,
-				F8BD5C5D1A6C1C6500DD357E /* TrigonometricTests.swift in Sources */,
-				F8BD5C5E1A6C1C6500DD357E /* XCTestCase+Surge.swift in Sources */,
-				F8BD5C591A6C1C6500DD357E /* ArithmeticTests.swift in Sources */,
-				F8BD5C5B1A6C1C6500DD357E /* ExponentialTests.swift in Sources */,
+				DC9BF1751C4E3D8E00AFDEC2 /* ArithmeticTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,48 +292,41 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F84A6AB819A9A771007B53E1 /* PBXTargetDependency */ = {
+		DC9BF1791C4E3D8E00AFDEC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F8A1E1A919917A79009735E2 /* Jolt */;
-			targetProxy = F84A6AB719A9A771007B53E1 /* PBXContainerItemProxy */;
+			targetProxy = DC9BF1781C4E3D8E00AFDEC2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F84A6AB519A9A72F007B53E1 /* Debug */ = {
+		DC9BF17B1C4E3D8E00AFDEC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				INFOPLIST_FILE = JoltTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Jolt;
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/SurgeTests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PRODUCT_BUNDLE_IDENTIFIER = Hungrosity.JoltTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Debug;
 		};
-		F84A6AB619A9A72F007B53E1 /* Release */ = {
+		DC9BF17C1C4E3D8E00AFDEC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = JoltTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mattt.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Jolt;
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/SurgeTests-Bridging-Header.h";
+				PRODUCT_BUNDLE_IDENTIFIER = Hungrosity.JoltTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -485,11 +451,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F84A6AB419A9A72F007B53E1 /* Build configuration list for PBXNativeTarget "JoltTests" */ = {
+		DC9BF17A1C4E3D8E00AFDEC2 /* Build configuration list for PBXNativeTarget "JoltTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F84A6AB519A9A72F007B53E1 /* Debug */,
-				F84A6AB619A9A72F007B53E1 /* Release */,
+				DC9BF17B1C4E3D8E00AFDEC2 /* Debug */,
+				DC9BF17C1C4E3D8E00AFDEC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

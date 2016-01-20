@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 import Foundation
-import Surge
 import XCTest
 
 class ExponentialTests: XCTestCase {

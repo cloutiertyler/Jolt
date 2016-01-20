@@ -78,6 +78,15 @@ extension Float: AccelerateFloatingPoint {
         return results
     }
     
+    // MARK: Sub
+    
+    public static func sub(x: [Float], y: [Float]) -> [Float] {
+        var results = [Float](x)
+        cblas_saxpy(Int32(y.count), -1.0, y, 1, &results, 1)
+        
+        return results
+    }
+    
     // MARK: Multiply
     
     public static func mul(x: [Float], y: [Float]) -> [Float] {

@@ -14,7 +14,6 @@ extension AccelerateFloatingPoint {
     }
 }
 
-
 // MARK: - Operators
 
 infix operator • {}

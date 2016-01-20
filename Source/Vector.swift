@@ -9,7 +9,7 @@
 // MARK: Normalization
 
 extension AccelerateFloatingPoint {
-    public static func normalized<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    public static func normalize<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
         return  x / T.norm(x)
     }
 }
@@ -31,6 +31,10 @@ public func norm<T: AccelerateFloatingPoint>(x: [T]) -> T {
     return T.norm(x)
 }
 
+public func normalize<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return  T.normalize(x)
+}
+
 // MARK: - Vector CollectionType Extension
 
 public extension CollectionType where Generator.Element: AccelerateFloatingPoint {
@@ -49,6 +53,10 @@ public extension CollectionType where Generator.Element: AccelerateFloatingPoint
     
     public func norm() -> Generator.Element {
         return Generator.Element.norm(Array(self))
+    }
+    
+    public func normalized() -> [Generator.Element] {
+        return Generator.Element.normalize(Array(self))
     }
     
 }

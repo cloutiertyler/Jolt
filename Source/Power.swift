@@ -20,3 +20,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+// MARK: - Power Global Functions
+
+public func pow<T: AccelerateFloatingPoint>(x: [T], y: [T]) -> [T] {
+    return T.pow(x, y: y)
+}
+
+
+// MARK: - Power CollectionType Extension
+
+public extension CollectionType where Generator.Element: AccelerateFloatingPoint {
+    
+    public func raisedTo(y: [Generator.Element]) -> [Generator.Element] {
+        return Generator.Element.pow(Array(self), y: y)
+    }
+    
+}

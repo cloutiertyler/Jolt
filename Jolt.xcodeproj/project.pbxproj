@@ -136,13 +136,13 @@
 				DC9BF1541C4DFDA200AFDEC2 /* Double.swift */,
 				F8A1E1C419917B0A009735E2 /* Arithmetic.swift */,
 				DC9BF1461C4DCA6E00AFDEC2 /* Vector.swift */,
-				E65C5BE319FF9CF600149FF1 /* Matrix.swift */,
 				F8A1E1C819917B0A009735E2 /* Power.swift */,
 				F8A1E1C519917B0A009735E2 /* Auxiliary.swift */,
 				F8A1E1C619917B0A009735E2 /* Exponential.swift */,
 				F8AE90FD19D1D9120078C7B2 /* FFT.swift */,
 				F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */,
 				F8A1E1CA19917B0A009735E2 /* Trigonometric.swift */,
+				E65C5BE319FF9CF600149FF1 /* Matrix.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;

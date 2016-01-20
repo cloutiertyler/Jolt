@@ -5,7 +5,7 @@
 
 Because of its relative obscurity and inconvenient APIs, Accelerate is not commonly used by developers... which is a shame, since many applications could benefit from these performance optimizations.
 
-**Surge aims to bring Accelerate to the mainstream, making it as easy (and nearly as fast, in most cases) to perform computation over a set of numbers as for a single member.**
+**Jolt aims to bring Accelerate to the mainstream, making it as easy (and nearly as fast, in most cases) to perform computation over a set of numbers as for a single member.**
 
 Though, keep in mind: _Accelerate is not a silver bullet_. Under certain conditions, such as performing simple calculations over a small data set, Accelerate can be out-performed by conventional algorithms. Always benchmark to determine the performance characteristics of each potential approach.
 
@@ -34,8 +34,9 @@ var sum: Double = 0.0
 // Naïve Swift Implementation
 sum = reduce(numbers, 0.0, +)
 
-// Jolt Implementation
-sum = Double.sum(numbers)
+// Jolt Implementations
+sum = Jolt.sum(numbers)
+sum = numbers.summed()
 ```
 
 _(Time in milliseconds, Optimization Level `-Ofast`)_
@@ -134,10 +135,10 @@ _The infrastructure and best practices for distributing Swift libraries are curr
 ### Computing Sum of `[Double]`
 
 ```swift
-import Surge
+import Jolt
 
 let n = [1.0, 2.0, 3.0, 4.0, 5.0]
-let sum = Double.sum(n) // 15.0
+let sum = n.summed() // 15.0
 ```
 
 ### Computing Product of Two `[Double]`s
@@ -148,11 +149,11 @@ import Jolt
 let a = [1.0, 3.0, 5.0, 7.0]
 let b = [2.0, 4.0, 6.0, 8.0]
 
-let product = Double.mul(a, b) // [2.0, 12.0, 30.0, 56.0]
+let product = a * b // [2.0, 12.0, 30.0, 56.0]
 ```
 
 ---
 
 ## License
 
-Surge is available under the MIT license. See the LICENSE file for more info.
+Jolt is available under the MIT license. See the LICENSE file for more info.

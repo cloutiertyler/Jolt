@@ -206,7 +206,7 @@ extension Float: AccelerateFloatingPoint {
     
     // MARK: Copy Sign
     
-    public static func copysign(sign: [Float], magnitude: [Float]) -> [Float] {
+    public static func copysign(magnitude: [Float], sign: [Float]) -> [Float] {
         var results = [Float](count: sign.count, repeatedValue: 0.0)
         vvcopysignf(&results, magnitude, sign, [Int32(sign.count)])
         

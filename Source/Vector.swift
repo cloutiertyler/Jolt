@@ -15,6 +15,7 @@ extension AccelerateFloatingPoint {
 }
 
 // MARK: - Vector Global Functions
+
 public func dot<T: AccelerateFloatingPoint>(x: [T], y: [T]) -> T {
     return T.dot(x, y: y)
 }

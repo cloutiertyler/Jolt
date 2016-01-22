@@ -89,7 +89,7 @@ public protocol AccelerateFloatingPoint: FloatingPointType, FloatLiteralConverti
     
     static func clip(x: [Self], low: Self, high: Self) -> [Self]
 
-    static func copysign(sign: [Self], magnitude: [Self]) -> [Self]
+    static func copysign(magnitude: [Self], sign: [Self]) -> [Self]
     
     static func floor(x: [Self]) -> [Self]
     

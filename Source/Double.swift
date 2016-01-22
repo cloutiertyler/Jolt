@@ -209,7 +209,7 @@ extension Double: AccelerateFloatingPoint {
     
     // MARK: Copy Sign
     
-    public static func copysign(sign: [Double], magnitude: [Double]) -> [Double] {
+    public static func copysign(magnitude: [Double], sign: [Double]) -> [Double] {
         var results = [Double](count: sign.count, repeatedValue: 0.0)
         vvcopysign(&results, magnitude, sign, [Int32(sign.count)])
         

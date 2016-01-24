@@ -19,3 +19,60 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
+
+// MARK: - Exponential Global Functions
+
+public func exp<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.exp(x)
+}
+
+public func exp2<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.exp2(x)
+}
+
+public func log<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.log(x)
+}
+
+public func log2<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.log2(x)
+}
+
+public func log10<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.log10(x)
+}
+
+public func logb<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.logb(x)
+}
+
+// MARK: - Exponential CollectionType Extension
+
+public extension Array where Element: AccelerateFloatingPoint {
+    
+    public func exp() -> [Element] {
+        return Element.exp(self)
+    }
+    
+    public func exp2() -> [Element] {
+        return Element.exp2(self)
+    }
+    
+    public func log() -> [Element] {
+        return Element.exp(self)
+    }
+    
+    public func log2() -> [Element] {
+        return Element.exp(self)
+    }
+    
+    public func log10() -> [Element] {
+        return Element.exp(self)
+    }
+    
+    public func logb() -> [Element] {
+        return Element.exp(self)
+    }
+    
+}

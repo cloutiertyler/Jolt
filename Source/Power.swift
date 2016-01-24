@@ -27,12 +27,12 @@ public func pow<T: AccelerateFloatingPoint>(x: [T], y: [T]) -> [T] {
 }
 
 
-// MARK: - Power CollectionType Extension
+// MARK: - Power Array Extension
 
-public extension CollectionType where Generator.Element: AccelerateFloatingPoint {
+public extension Array where Element: AccelerateFloatingPoint {
     
-    public func raisedTo(y: [Generator.Element]) -> [Generator.Element] {
-        return Generator.Element.pow(Array(self), y: y)
+    public func raisedTo(y: [Element]) -> [Element] {
+        return Element.pow(self, y: y)
     }
     
 }

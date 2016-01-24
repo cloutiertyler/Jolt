@@ -62,48 +62,48 @@ public func trunc<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
     return T.trunc(x)
 }
 
-// MARK: - Auxilliary CollectionType Extension
+// MARK: - Auxilliary Array Extension
 
-public extension CollectionType where Generator.Element: AccelerateFloatingPoint {
+public extension Array where Element: AccelerateFloatingPoint {
 
-    public func absoluted() -> [Generator.Element] {
-        return Generator.Element.abs(Array(self))
+    public func absoluted() -> [Element] {
+        return Element.abs(self)
     }
     
-    public func floored() -> [Generator.Element] {
-        return Generator.Element.floor(Array(self))
+    public func floored() -> [Element] {
+        return Element.floor(self)
     }
     
-    public func ceiled() -> [Generator.Element] {
-        return Generator.Element.ceil(Array(self))
+    public func ceiled() -> [Element] {
+        return Element.ceil(self)
     }
     
-    public func negated() -> [Generator.Element] {
-        return Generator.Element.neg(Array(self))
+    public func negated() -> [Element] {
+        return Element.neg(self)
     }
     
-    public func clipped(low: Generator.Element, high: Generator.Element) -> [Generator.Element] {
-        return Generator.Element.clip(Array(self), low: low, high: high)
+    public func clipped(low: Element, high: Element) -> [Element] {
+        return Element.clip(self, low: low, high: high)
     }
     
-    public func copysigned(sign: [Generator.Element]) -> [Generator.Element] {
-        return Generator.Element.copysign(Array(self), sign: sign)
+    public func copysigned(sign: [Element]) -> [Element] {
+        return Element.copysign(self, sign: sign)
     }
     
-    public func reciprocated() -> [Generator.Element] {
-        return Generator.Element.rec(Array(self))
+    public func reciprocated() -> [Element] {
+        return Element.rec(self)
     }
     
-    public func rounded() -> [Generator.Element] {
-        return Generator.Element.round(Array(self))
+    public func rounded() -> [Element] {
+        return Element.round(self)
     }
     
-    public func thresholded(low: Generator.Element) -> [Generator.Element] {
-        return Generator.Element.threshold(Array(self), low: low)
+    public func thresholded(low: Element) -> [Element] {
+        return Element.threshold(self, low: low)
     }
     
-    public func truncated() -> [Generator.Element] {
-        return Generator.Element.trunc(Array(self))
+    public func truncated() -> [Element] {
+        return Element.trunc(self)
     }
     
 }

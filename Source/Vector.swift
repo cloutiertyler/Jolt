@@ -36,28 +36,28 @@ public func normalize<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
     return  T.normalize(x)
 }
 
-// MARK: - Vector CollectionType Extension
+// MARK: - Vector Array Extension
 
-public extension CollectionType where Generator.Element: AccelerateFloatingPoint {
+public extension Array where Element: AccelerateFloatingPoint {
     
-    public func dotting(y: [Generator.Element]) -> Generator.Element {
-        return Generator.Element.dot(Array(self), y: y)
+    public func dotting(y: [Element]) -> Element {
+        return Element.dot(self, y: y)
     }
     
-    public func crossing(y: [Generator.Element]) -> [Generator.Element] {
-        return Generator.Element.cross(Array(self), y: y)
+    public func crossing(y: [Element]) -> [Element] {
+        return Element.cross(self, y: y)
     }
     
-    public func length() -> Generator.Element {
-        return Generator.Element.length(Array(self))
+    public func length() -> Element {
+        return Element.length(self)
     }
     
-    public func norm() -> Generator.Element {
-        return Generator.Element.norm(Array(self))
+    public func norm() -> Element {
+        return Element.norm(self)
     }
     
-    public func normalized() -> [Generator.Element] {
-        return Generator.Element.normalize(Array(self))
+    public func normalized() -> [Element] {
+        return Element.normalize(self)
     }
     
 }

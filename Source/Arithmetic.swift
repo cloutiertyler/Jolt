@@ -78,66 +78,66 @@ public func sqrt<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
     return T.sqrt(x)
 }
 
-// MARK: - Arithmetic CollectionType Extension
+// MARK: - Arithmetic Array Extension
 
-public extension CollectionType where Generator.Element: AccelerateFloatingPoint {
+public extension Array where Element: AccelerateFloatingPoint {
     
-    public func sum() -> Generator.Element {
-        return Generator.Element.sum(Array(self))
+    public func sum() -> Element {
+        return Element.sum(self)
     }
     
-    public func asum() -> Generator.Element {
-        return Generator.Element.asum(Array(self))
+    public func asum() -> Element {
+        return Element.asum(self)
     }
     
-    public func max() -> Generator.Element {
-        return Generator.Element.max(Array(self))
+    public func max() -> Element {
+        return Element.max(self)
     }
     
-    public func min() -> Generator.Element {
-        return Generator.Element.min(Array(self))
+    public func min() -> Element {
+        return Element.min(self)
     }
     
-    public func mean() -> Generator.Element {
-        return Generator.Element.mean(Array(self))
+    public func mean() -> Element {
+        return Element.mean(self)
     }
     
-    public func meamg() -> Generator.Element {
-        return Generator.Element.meamg(Array(self))
+    public func meamg() -> Element {
+        return Element.meamg(self)
     }
     
-    public func measq() -> Generator.Element {
-        return Generator.Element.measq(Array(self))
+    public func measq() -> Element {
+        return Element.measq(self)
     }
     
-    public func adding(y: [Generator.Element]) -> [Generator.Element] {
-        return Generator.Element.add(Array(self), y: y)
+    public func adding(y: [Element]) -> [Element] {
+        return Element.add(self, y: y)
     }
     
-    public func subtracting(y: [Generator.Element]) -> [Generator.Element] {
-        return Generator.Element.sub(Array(self), y: y)
+    public func subtracting(y: [Element]) -> [Element] {
+        return Element.sub(self, y: y)
     }
     
-    public func multiplying(y: [Generator.Element]) -> [Generator.Element] {
-        return Generator.Element.mul(Array(self), y: y)
+    public func multiplying(y: [Element]) -> [Element] {
+        return Element.mul(self, y: y)
     }
     
-    public func dividing(y: [Generator.Element]) -> [Generator.Element] {
-        return Generator.Element.div(Array(self), y: y)
+    public func dividing(y: [Element]) -> [Element] {
+        return Element.div(self, y: y)
     }
     
     // TODO: Conform this to API Design Guildines on swift.org
-    public func mod(y: [Generator.Element]) -> [Generator.Element] {
-        return Generator.Element.mod(Array(self), y: y)
+    public func mod(y: [Element]) -> [Element] {
+        return Element.mod(self, y: y)
     }
     
     // TODO: Conform this to API Design Guildines on swift.org
-    public func remainder(y: [Generator.Element]) -> [Generator.Element] {
-        return Generator.Element.remainder(Array(self), y: y)
+    public func remainder(y: [Element]) -> [Element] {
+        return Element.remainder(self, y: y)
     }
 
-    public func sqrted() -> [Generator.Element] {
-        return Generator.Element.sqrt(Array(self))
+    public func sqrted() -> [Element] {
+        return Element.sqrt(self)
     }
     
 }

@@ -276,6 +276,10 @@ extension Float: AccelerateFloatingPoint {
         return results
     }
     
+//    public static func exp(inout x: [Float]) {
+//        vvexpf(&x, x, [Int32(x.count)])
+//    }
+    
     // MARK: Square Exponentiation
     
     public static func exp2(x: [Float]) -> [Float] {

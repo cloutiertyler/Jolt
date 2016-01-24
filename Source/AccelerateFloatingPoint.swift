@@ -107,6 +107,8 @@ public protocol AccelerateFloatingPoint: FloatingPointType, FloatLiteralConverti
     // MARK: Exponentiation
     
     static func exp(x: [Self]) -> [Self]
+    
+//    static func exp(inout x: [Self])
 
     static func exp2(x: [Self]) -> [Self]
 

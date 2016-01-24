@@ -279,6 +279,10 @@ extension Double: AccelerateFloatingPoint {
         return results
     }
     
+//    public static func exp(inout x: [Double]) {
+//        vvexp(&x, x, [Int32(x.count)])
+//    }
+    
     // MARK: Square Exponentiation
     
     public static func exp2(x: [Double]) -> [Double] {

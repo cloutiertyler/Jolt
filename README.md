@@ -64,7 +64,7 @@ sum = Jolt.sum(numbers)
 sum = numbers.sum()
 ```
 
-_(Time in milliseconds, Optimization Level `Fast, Whole Module Optimization`)_
+_(Time in seconds, Optimization Level `Fast, Whole Module Optimization`)_
 
 | Operation |     _n_     |   Swift    |   Surge    |     Δ     |
 |-----------|-------------|------------|------------|-----------|

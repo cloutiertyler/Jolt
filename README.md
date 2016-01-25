@@ -1,10 +1,35 @@
 # Jolt
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 *Swift + Accelerate + Heavy inspiration from Surge*
 
+Jolt is a project which was originally a fork of [Surge](https://github.com/mattt/Surge). It has since been spun off into it's own project due significant API differences. Surge was originally developed during the Swift 1 timeframe, yet Swift has evolved and is continuing to evolve. Therefore, the motivation Jolt was to bring Surge up to date with new Swift features and API Guidelines. Swift's new [API Guidelines](https://swift.org/documentation/api-design-guidelines/) are available at [swift.org](https://www.swift.org).
 
-> Jolt is a project which was originally a fork of [Surge](https://github.com/mattt/Surge). It has since been spun off into it's own project due significant API differences. Surge was originally developed during the Swift 1 timeframe, yet Swift has evolved and is continuing to evolve. Therefore, the motivation Jolt was to bring Surge up to date with new Swift features and API Guidelines. Swift's new [API Guidelines](https://swift.org/documentation/api-design-guidelines/) are available at [swift.org](https://www.swift.org).
+####Other notable differences
+
+- Jolt is built for both OSX and iOS platforms. 
+- Jolt can be easily installed with [Carthage](https://github.com/Carthage/Carthage).
+- It is possible to create custom generic types that utilize Jolt functions.
+```
+struct Plane<T: AccelerateFloatingPoint> {
+   let normal: [T]
+   let distance: T
+   
+   init(normal: [T], point: [T]) {
+       self.normal = T.normalize(normal)
+       self.distance = T.dot(normal, y: point)
+   }
+   
+   init(p1: [T], p2: [T], p3: [T]){
+       self.normal = T.normalize(T.cross((p2 + -p1), y: (p3 + -p1)))
+       self.distance = -(T.dot(normal, y: p1))
+   }
+}
+```
 
 Thank you to Mattt Thompson for the excellent idea of surfacing the Accelerate Framework API and making them Swifty!
+
+---
 
 [Accelerate](https://developer.apple.com/library/mac/documentation/Accelerate/Reference/AccelerateFWRef/_index.html) is a framework that provides high-performance functions for matrix math, digital signal processing, and image manipulation. It harnesses [SIMD](http://en.wikipedia.org/wiki/SIMD) instructions available in modern CPUs to significantly improve performance of certain calculations.
 
@@ -20,7 +45,6 @@ Well because those are silly.
 
 Disclaimer: **_Accelerate is not a silver bullet_**. Under certain conditions, such as performing simple calculations over a small data set, Accelerate can be out-performed by conventional algorithms. Always benchmark to determine the performance characteristics of each potential approach.
 
----
 
 ## Performance
 
@@ -52,7 +76,11 @@ _(Time in milliseconds, Optimization Level `Fast, Whole Module Optimization`)_
 
 ## Installation
 
-_The infrastructure and best practices for distributing Swift libraries are currently in flux during this beta period of Swift & Xcode. In the meantime, you can add Jolt as a git submodule, drag the `Jolt.xcodeproj` file into your Xcode project, and add `Jolt.framework` as a dependency for your target._
+Jolt is Carthage compatible. To install add the following to you Cartfile.
+```
+github "TheArtOfEngineering/Jolt" 
+```
+For additional info on Carthage installation please visit [https://github.com/Carthage/Carthage](https://github.com/Carthage/Carthage).
 
 ---
 
@@ -139,7 +167,7 @@ _The infrastructure and best practices for distributing Swift libraries are curr
 import Jolt
 
 let n = [1.0, 2.0, 3.0, 4.0, 5.0]
-let sum = n.summed() // 15.0
+let sum = n.sum() // 15.0
 ```
 
 ### Computing Product of Two `[Double]`s

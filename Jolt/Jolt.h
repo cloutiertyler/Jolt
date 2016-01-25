@@ -6,7 +6,7 @@
 //  Copyright © 2016 Tyler Cloutier. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Jolt.
 FOUNDATION_EXPORT double JoltVersionNumber;

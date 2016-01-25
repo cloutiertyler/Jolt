@@ -82,7 +82,6 @@ github "TheArtOfEngineering/Jolt"
 ```
 For additional info on Carthage installation please visit [https://github.com/Carthage/Carthage](https://github.com/Carthage/Carthage).
 
----
 
 ## Inventory
 

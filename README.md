@@ -40,15 +40,15 @@ sum = Jolt.sum(numbers)
 sum = numbers.sum()
 ```
 
-_(Time in milliseconds, Optimization Level `-Ofast`)_
+_(Time in milliseconds, Optimization Level `Fast, Whole Module Optimization`)_
 
-|    _n_     |   Swift          |   Surge       |   Δ       |
-|------------|------------------|---------------|-----------|
-| 100        | 0.269081         | 0.004453      | ~60x      |
-| 100000     | 251.037254       | 0.028687      | ~9000x    |
-| 100000000  | 239474.689326    | 57.009841     | ~4000x    |
+| Operation |     _n_     |   Swift    |   Surge    |     Δ     |
+|-----------|-------------|------------|------------|-----------|
+|    sum    | 100,000,000 | 0.055      | 0.112      | ~0.5x     |
+|    sin    | 100,000,000 | 7.803      | 1.946      | ~4x       |
+|    exp    | 100,000,000 | 6.406      | 1.427      | ~4.5x     |
 
-> Jolt's performance characteristics have not yet been thoroughly evaluated, though initial benchmarks show incredible promise. Further investigation is definitely warranted.
+> Jolt's performance characteristics have not yet been thoroughly evaluated, though initial benchmarks show some promise. If anything, a comparison with the original benchmarks from Surge demonstrate just how far the Swift optimizer has come.
 
 ## Installation
 

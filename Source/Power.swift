@@ -26,6 +26,9 @@ public func pow<T: AccelerateFloatingPoint>(x: [T], y: [T]) -> [T] {
     return T.pow(x, y: y)
 }
 
+public func raise<T: AccelerateFloatingPoint>(x: [T], toPower y: [T]) -> [T] {
+    return T.pow(x, y: y)
+}
 
 // MARK: - Power Array Extension
 

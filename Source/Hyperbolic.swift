@@ -19,3 +19,37 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
+
+// MARK: - Hyperbolic Global Functions
+
+public func sinh<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.sinh(x)
+}
+
+public func cosh<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.cosh(x)
+}
+
+public func tanh<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.tanh(x)
+}
+
+public func asinh<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.asinh(x)
+}
+
+public func acosh<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.acosh(x)
+}
+
+public func atanh<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+    return T.atanh(x)
+}
+
+// MARK: - Hyperbolic Array Extension
+// There are intentionally no methods for hyperbolic functions.
+// Such functions are more clearly expressed as mathematical functions.
+public extension Array where Element: AccelerateFloatingPoint {
+    
+}

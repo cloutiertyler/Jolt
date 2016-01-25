@@ -46,7 +46,7 @@ public func copysign<T: AccelerateFloatingPoint>(magnitude: [T], sign: [T]) -> [
     return T.copysign(magnitude, sign: sign)
 }
 
-public func rec<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+public func reciprocal<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
     return T.rec(x)
 }
 
@@ -58,7 +58,7 @@ public func threshold<T: AccelerateFloatingPoint>(x: [T], low: T) -> [T] {
     return T.threshold(x, low: low)
 }
 
-public func trunc<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
+public func truncate<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
     return T.trunc(x)
 }
 
@@ -66,15 +66,15 @@ public func trunc<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
 
 public extension Array where Element: AccelerateFloatingPoint {
 
-    public func absoluted() -> [Element] {
+    public func abs() -> [Element] {
         return Element.abs(self)
     }
     
-    public func floored() -> [Element] {
+    public func floor() -> [Element] {
         return Element.floor(self)
     }
     
-    public func ceiled() -> [Element] {
+    public func ceil() -> [Element] {
         return Element.ceil(self)
     }
     
@@ -86,7 +86,7 @@ public extension Array where Element: AccelerateFloatingPoint {
         return Element.clip(self, low: low, high: high)
     }
     
-    public func copysigned(sign: [Element]) -> [Element] {
+    public func copysign(sign: [Element]) -> [Element] {
         return Element.copysign(self, sign: sign)
     }
     

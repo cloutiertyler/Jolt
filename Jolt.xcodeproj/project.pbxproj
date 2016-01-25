@@ -140,8 +140,8 @@
 				F8A1E1C519917B0A009735E2 /* Auxiliary.swift */,
 				F8A1E1C619917B0A009735E2 /* Exponential.swift */,
 				F8AE90FD19D1D9120078C7B2 /* FFT.swift */,
-				F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */,
 				F8A1E1CA19917B0A009735E2 /* Trigonometric.swift */,
+				F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */,
 				E65C5BE319FF9CF600149FF1 /* Matrix.swift */,
 			);
 			path = Source;

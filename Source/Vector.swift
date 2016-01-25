@@ -40,7 +40,7 @@ public func normalize<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
 
 public extension Array where Element: AccelerateFloatingPoint {
     
-    public func dotting(y: [Element]) -> Element {
+    public func dot(y: [Element]) -> Element {
         return Element.dot(self, y: y)
     }
     

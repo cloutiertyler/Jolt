@@ -26,7 +26,7 @@ public func sum<T: AccelerateFloatingPoint>(x: [T]) -> T {
     return T.sum(x)
 }
 
-public func asum<T: AccelerateFloatingPoint>(x: [T]) -> T {
+public func sumAbsoluteValues<T: AccelerateFloatingPoint>(x: [T]) -> T {
     return T.asum(x)
 }
 
@@ -42,11 +42,11 @@ public func mean<T: AccelerateFloatingPoint>(x: [T]) -> T {
     return T.mean(x)
 }
 
-public func meamg<T: AccelerateFloatingPoint>(x: [T]) -> T {
+public func meanMagnitude<T: AccelerateFloatingPoint>(x: [T]) -> T {
     return T.meamg(x)
 }
 
-public func measq<T: AccelerateFloatingPoint>(x: [T]) -> T {
+public func meanSquare<T: AccelerateFloatingPoint>(x: [T]) -> T {
     return T.measq(x)
 }
 
@@ -54,15 +54,15 @@ public func add<T: AccelerateFloatingPoint>(x: [T], y: [T]) -> [T] {
     return T.add(x, y: y)
 }
 
-public func sub<T: AccelerateFloatingPoint>(x: [T], y: [T]) -> [T] {
+public func subtract<T: AccelerateFloatingPoint>(x: [T], y: [T]) -> [T] {
     return T.sub(x, y: y)
 }
 
-public func mul<T: AccelerateFloatingPoint>(x: [T], y: [T]) -> [T] {
+public func multiply<T: AccelerateFloatingPoint>(x: [T], y: [T]) -> [T] {
     return T.mul(x, y: y)
 }
 
-public func div<T: AccelerateFloatingPoint>(x: [T], y: [T]) -> [T] {
+public func divide<T: AccelerateFloatingPoint>(x: [T], y: [T]) -> [T] {
     return T.div(x, y: y)
 }
 
@@ -86,7 +86,7 @@ public extension Array where Element: AccelerateFloatingPoint {
         return Element.sum(self)
     }
     
-    public func asum() -> Element {
+    public func sumAbsoluteValues() -> Element {
         return Element.asum(self)
     }
     
@@ -102,41 +102,39 @@ public extension Array where Element: AccelerateFloatingPoint {
         return Element.mean(self)
     }
     
-    public func meamg() -> Element {
+    public func meanMagnitude() -> Element {
         return Element.meamg(self)
     }
     
-    public func measq() -> Element {
+    public func meanSquare() -> Element {
         return Element.measq(self)
     }
     
-    public func adding(y: [Element]) -> [Element] {
+    public func plus(y: [Element]) -> [Element] {
         return Element.add(self, y: y)
     }
     
-    public func subtracting(y: [Element]) -> [Element] {
+    public func minus(y: [Element]) -> [Element] {
         return Element.sub(self, y: y)
     }
     
-    public func multiplying(y: [Element]) -> [Element] {
+    public func times(y: [Element]) -> [Element] {
         return Element.mul(self, y: y)
     }
     
-    public func dividing(y: [Element]) -> [Element] {
+    public func dividedBy(y: [Element]) -> [Element] {
         return Element.div(self, y: y)
     }
     
-    // TODO: Conform this to API Design Guildines on swift.org
     public func mod(y: [Element]) -> [Element] {
         return Element.mod(self, y: y)
     }
     
-    // TODO: Conform this to API Design Guildines on swift.org
-    public func remainder(y: [Element]) -> [Element] {
+    public func remainderWhenDividedBy(y: [Element]) -> [Element] {
         return Element.remainder(self, y: y)
     }
 
-    public func sqrted() -> [Element] {
+    public func sqrt() -> [Element] {
         return Element.sqrt(self)
     }
     

@@ -20,3 +20,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+// MARK: - Fast Fourier Transform Global Functions
+
+public func fastFourierTransform<T: AccelerateFloatingPoint>(input: [T]) -> [T] {
+    return T.fft(input)
+}
+
+// MARK: - Fast Fourier Transform Array Extension
+
+public extension Array where Element: AccelerateFloatingPoint {
+
+    public func fastFourierTransform() -> [Element] {
+        return Element.fft(self)
+    }
+    
+}

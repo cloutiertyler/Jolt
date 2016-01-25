@@ -335,7 +335,7 @@ extension Double: AccelerateFloatingPoint {
         var imaginary = [Double](count: input.count, repeatedValue: 0.0)
         var splitComplex = DSPDoubleSplitComplex(realp: &real, imagp: &imaginary)
         
-        let length = vDSP_Length(floorf(log2f(Float(input.count))))
+        let length = vDSP_Length(Darwin.floor(Darwin.log2(Float(input.count))))
         let radix = FFTRadix(kFFTRadix2)
         let weights = vDSP_create_fftsetupD(length, radix)
         vDSP_fft_zipD(weights, &splitComplex, 1, length, FFTDirection(FFT_FORWARD))

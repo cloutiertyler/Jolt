@@ -47,32 +47,9 @@ public func logb<T: AccelerateFloatingPoint>(x: [T]) -> [T] {
     return T.logb(x)
 }
 
-// MARK: - Exponential CollectionType Extension
-
+// MARK: - Exponential Array Extension
+// There are intentionally no methods for exponetial functions.
+// Such functions are more clearly expressed as mathematical functions.
 public extension Array where Element: AccelerateFloatingPoint {
-    
-    public func exp() -> [Element] {
-        return Element.exp(self)
-    }
-    
-    public func exp2() -> [Element] {
-        return Element.exp2(self)
-    }
-    
-    public func log() -> [Element] {
-        return Element.exp(self)
-    }
-    
-    public func log2() -> [Element] {
-        return Element.exp(self)
-    }
-    
-    public func log10() -> [Element] {
-        return Element.exp(self)
-    }
-    
-    public func logb() -> [Element] {
-        return Element.exp(self)
-    }
     
 }

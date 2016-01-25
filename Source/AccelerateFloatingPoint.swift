@@ -10,6 +10,31 @@ import Foundation
 
 public protocol AccelerateFloatingPoint: FloatingPointType, FloatLiteralConvertible {
     
+    // Operators that Float and Double already implement.
+    
+    prefix func -(x: Self) -> Self
+    
+    func -(lhs: Self, rhs: Self) -> Self
+    
+    func +(lhs: Self, rhs: Self) -> Self
+    
+    func *(lhs: Self, rhs: Self) -> Self
+    
+    func /(lhs: Self, rhs: Self) -> Self
+    
+    func %(lhs: Self, rhs: Self) -> Self
+    
+    
+    func +=(inout lhs: Self, rhs: Self)
+    
+    func -=(inout lhs: Self, rhs: Self)
+    
+    func *=(inout lhs: Self, rhs: Self)
+    
+    func /=(inout lhs: Self, rhs: Self)
+    
+    func %=(inout lhs: Self, rhs: Self)
+    
     // MARK: Arithmetic
     
     static func sum(x: [Self]) -> Self

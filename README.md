@@ -18,7 +18,8 @@ Back in the mid 90's, Apple, IBM, and Motorola teamed up to create [AltiVec](htt
 > If it's a derivative of Surge, why didn't I call it Jounce or Snap?
 Well because those are silly.
 
-**Though, keep in mind:** _Accelerate is not a silver bullet_. Under certain conditions, such as performing simple calculations over a small data set, Accelerate can be out-performed by conventional algorithms. Always benchmark to determine the performance characteristics of each potential approach.
+Disclaimer: **_Accelerate is not a silver bullet_**. Under certain conditions, such as performing simple calculations over a small data set, Accelerate can be out-performed by conventional algorithms. Always benchmark to determine the performance characteristics of each potential approach.
+
 ---
 
 ## Performance

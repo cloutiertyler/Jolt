@@ -1,5 +1,10 @@
 # Jolt
-*Swift + Accelerate + A shameless fork from Surge*
+*Swift + Accelerate + Heavy inspiration from Surge*
+
+
+> Jolt is a project which was originally a fork of [Surge](https://github.com/mattt/Surge). It has since been spun off into it's own project due significant API differences. Surge was originally developed during the Swift 1 timeframe, yet Swift has evolved and is continuing to evolve. Therefore, the motivation Jolt was to bring Surge up to date with new Swift features and API Guidelines. Swift's new [API Guidelines](https://swift.org/documentation/api-design-guidelines/) are available at [swift.org](https://www.swift.org).
+
+Thank you to Mattt Thompson for the excellent idea of surfacing the Accelerate Framework API and making them Swifty!
 
 [Accelerate](https://developer.apple.com/library/mac/documentation/Accelerate/Reference/AccelerateFWRef/_index.html) is a framework that provides high-performance functions for matrix math, digital signal processing, and image manipulation. It harnesses [SIMD](http://en.wikipedia.org/wiki/SIMD) instructions available in modern CPUs to significantly improve performance of certain calculations.
 
@@ -7,18 +12,13 @@ Because of its relative obscurity and inconvenient APIs, Accelerate is not commo
 
 **Jolt aims to bring Accelerate to the mainstream, making it as easy (and nearly as fast, in most cases) to perform computation over a set of numbers as for a single member.**
 
-Though, keep in mind: _Accelerate is not a silver bullet_. Under certain conditions, such as performing simple calculations over a small data set, Accelerate can be out-performed by conventional algorithms. Always benchmark to determine the performance characteristics of each potential approach.
-
----
-
 > Curious about the name _Jolt_? 
+The name Jolt is derived from the fact that this project is forked from Surge. 
 Back in the mid 90's, Apple, IBM, and Motorola teamed up to create [AltiVec](http://en.wikipedia.org/wiki/AltiVec) (a.k.a the Velocity Engine), which provided a SIMD instruction set for the PowerPC architecture. When Apple made the switch to Intel CPUs, AltiVec was ported to the x86 architecture and rechristened [Accelerate](https://developer.apple.com/library/mac/documentation/Accelerate/Reference/AccelerateFWRef/_index.html). The derivative of Accelerate (and second derivative of Velocity) is known as either [jerk, jolt, surge, or lurch](http://en.wikipedia.org/wiki/Jerk_%28physics%29), hence the name of this library.
-Jolt is a synonym for Surge, the project Jolt is derived from! 
-
 > If it's a derivative of Surge, why didn't I call it Jounce or Snap?
 Well because those are silly.
 
-
+**Though, keep in mind:** _Accelerate is not a silver bullet_. Under certain conditions, such as performing simple calculations over a small data set, Accelerate can be out-performed by conventional algorithms. Always benchmark to determine the performance characteristics of each potential approach.
 ---
 
 ## Performance
@@ -36,7 +36,7 @@ sum = reduce(numbers, 0.0, +)
 
 // Jolt Implementations
 sum = Jolt.sum(numbers)
-sum = numbers.summed()
+sum = numbers.sum()
 ```
 
 _(Time in milliseconds, Optimization Level `-Ofast`)_

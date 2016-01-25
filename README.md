@@ -76,7 +76,7 @@ _(Time in seconds, Optimization Level `Fast, Whole Module Optimization`)_
 
 ## Installation
 
-Jolt is Carthage compatible. To install add the following to you Cartfile.
+Jolt is Carthage compatible. To install add the following to your Cartfile.
 ```
 github "TheArtOfEngineering/Jolt" 
 ```

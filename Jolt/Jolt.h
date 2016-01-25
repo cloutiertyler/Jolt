@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Accelerate/Accelerate.h>
 
 //! Project version number for Jolt.
 FOUNDATION_EXPORT double JoltVersionNumber;
 
 //! Project version string for Jolt.
 FOUNDATION_EXPORT const unsigned char JoltVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <Jolt/PublicHeader.h>
 
 

@@ -17,7 +17,6 @@
 		DC624E951C55B06C0003C653 /* FFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E881C55B06C0003C653 /* FFT.swift */; };
 		DC624E961C55B06C0003C653 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E891C55B06C0003C653 /* Float.swift */; };
 		DC624E971C55B06C0003C653 /* Hyperbolic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E8A1C55B06C0003C653 /* Hyperbolic.swift */; };
-		DC624E981C55B06C0003C653 /* Jolt.h in Headers */ = {isa = PBXBuildFile; fileRef = DC624E8B1C55B06C0003C653 /* Jolt.h */; };
 		DC624E991C55B06C0003C653 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E8C1C55B06C0003C653 /* Matrix.swift */; };
 		DC624E9A1C55B06C0003C653 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E8D1C55B06C0003C653 /* Power.swift */; };
 		DC624E9B1C55B06C0003C653 /* Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E8E1C55B06C0003C653 /* Trigonometric.swift */; };
@@ -49,7 +48,6 @@
 		DC624E881C55B06C0003C653 /* FFT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFT.swift; sourceTree = "<group>"; };
 		DC624E891C55B06C0003C653 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
 		DC624E8A1C55B06C0003C653 /* Hyperbolic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hyperbolic.swift; sourceTree = "<group>"; };
-		DC624E8B1C55B06C0003C653 /* Jolt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jolt.h; sourceTree = "<group>"; };
 		DC624E8C1C55B06C0003C653 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		DC624E8D1C55B06C0003C653 /* Power.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
 		DC624E8E1C55B06C0003C653 /* Trigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigonometric.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				DC624E881C55B06C0003C653 /* FFT.swift */,
 				DC624E891C55B06C0003C653 /* Float.swift */,
 				DC624E8A1C55B06C0003C653 /* Hyperbolic.swift */,
-				DC624E8B1C55B06C0003C653 /* Jolt.h */,
 				DC624E8C1C55B06C0003C653 /* Matrix.swift */,
 				DC624E8D1C55B06C0003C653 /* Power.swift */,
 				DC624E8E1C55B06C0003C653 /* Trigonometric.swift */,
@@ -143,7 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC624E6C1C55AED40003C653 /* Jolt.h in Headers */,
-				DC624E981C55B06C0003C653 /* Jolt.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +314,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,7 +357,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

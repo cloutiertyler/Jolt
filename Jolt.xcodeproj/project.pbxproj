@@ -7,252 +7,230 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC9BF1471C4DCA6E00AFDEC2 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1461C4DCA6E00AFDEC2 /* Vector.swift */; };
-		DC9BF1511C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1501C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift */; };
-		DC9BF1531C4DFD9800AFDEC2 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1521C4DFD9800AFDEC2 /* Float.swift */; };
-		DC9BF1551C4DFDA200AFDEC2 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1541C4DFDA200AFDEC2 /* Double.swift */; };
-		DC9BF1751C4E3D8E00AFDEC2 /* ArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BF1741C4E3D8E00AFDEC2 /* ArithmeticTests.swift */; };
-		DC9BF1771C4E3D8E00AFDEC2 /* Jolt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A1E1AA19917A79009735E2 /* Jolt.framework */; };
-		E65C5BE419FF9CF600149FF1 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65C5BE319FF9CF600149FF1 /* Matrix.swift */; };
-		F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C419917B0A009735E2 /* Arithmetic.swift */; };
-		F8A1E1CC19917B0A009735E2 /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C519917B0A009735E2 /* Auxiliary.swift */; };
-		F8A1E1CD19917B0A009735E2 /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C619917B0A009735E2 /* Exponential.swift */; };
-		F8A1E1CE19917B0A009735E2 /* Hyperbolic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */; };
-		F8A1E1CF19917B0A009735E2 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1C819917B0A009735E2 /* Power.swift */; };
-		F8A1E1D019917B0A009735E2 /* Jolt.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A1E1C919917B0A009735E2 /* Jolt.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8A1E1D119917B0A009735E2 /* Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A1E1CA19917B0A009735E2 /* Trigonometric.swift */; };
-		F8A1E1D519917C25009735E2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A1E1D219917C0B009735E2 /* Accelerate.framework */; };
-		F8A1E1D719917C2B009735E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A1E1D619917C2B009735E2 /* Foundation.framework */; };
-		F8AE90FE19D1D9120078C7B2 /* FFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AE90FD19D1D9120078C7B2 /* FFT.swift */; };
+		DC624E6C1C55AED40003C653 /* Jolt.h in Headers */ = {isa = PBXBuildFile; fileRef = DC624E6B1C55AED40003C653 /* Jolt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC624E731C55AED40003C653 /* Jolt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC624E681C55AED40003C653 /* Jolt.framework */; };
+		DC624E901C55B06C0003C653 /* AccelerateFloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E831C55B06C0003C653 /* AccelerateFloatingPoint.swift */; };
+		DC624E911C55B06C0003C653 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E841C55B06C0003C653 /* Arithmetic.swift */; };
+		DC624E921C55B06C0003C653 /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E851C55B06C0003C653 /* Auxiliary.swift */; };
+		DC624E931C55B06C0003C653 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E861C55B06C0003C653 /* Double.swift */; };
+		DC624E941C55B06C0003C653 /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E871C55B06C0003C653 /* Exponential.swift */; };
+		DC624E951C55B06C0003C653 /* FFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E881C55B06C0003C653 /* FFT.swift */; };
+		DC624E961C55B06C0003C653 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E891C55B06C0003C653 /* Float.swift */; };
+		DC624E971C55B06C0003C653 /* Hyperbolic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E8A1C55B06C0003C653 /* Hyperbolic.swift */; };
+		DC624E981C55B06C0003C653 /* Jolt.h in Headers */ = {isa = PBXBuildFile; fileRef = DC624E8B1C55B06C0003C653 /* Jolt.h */; };
+		DC624E991C55B06C0003C653 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E8C1C55B06C0003C653 /* Matrix.swift */; };
+		DC624E9A1C55B06C0003C653 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E8D1C55B06C0003C653 /* Power.swift */; };
+		DC624E9B1C55B06C0003C653 /* Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E8E1C55B06C0003C653 /* Trigonometric.swift */; };
+		DC624E9C1C55B06C0003C653 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E8F1C55B06C0003C653 /* Vector.swift */; };
+		DC624E9E1C55B10E0003C653 /* ArithmeticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC624E9D1C55B10E0003C653 /* ArithmeticTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DC9BF1781C4E3D8E00AFDEC2 /* PBXContainerItemProxy */ = {
+		DC624E741C55AED40003C653 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F8A1E1A119917A79009735E2 /* Project object */;
+			containerPortal = DC624E5F1C55AED40003C653 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F8A1E1A919917A79009735E2;
+			remoteGlobalIDString = DC624E671C55AED40003C653;
 			remoteInfo = Jolt;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC9BF1461C4DCA6E00AFDEC2 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
-		DC9BF1501C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerateFloatingPoint.swift; sourceTree = "<group>"; };
-		DC9BF1521C4DFD9800AFDEC2 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
-		DC9BF1541C4DFDA200AFDEC2 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
-		DC9BF1721C4E3D8E00AFDEC2 /* JoltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC9BF1741C4E3D8E00AFDEC2 /* ArithmeticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticTests.swift; sourceTree = "<group>"; };
-		DC9BF1761C4E3D8E00AFDEC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E65C5BE319FF9CF600149FF1 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
-		F8A1E1AA19917A79009735E2 /* Jolt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Jolt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8A1E1AE19917A79009735E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8A1E1C419917B0A009735E2 /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
-		F8A1E1C519917B0A009735E2 /* Auxiliary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auxiliary.swift; sourceTree = "<group>"; };
-		F8A1E1C619917B0A009735E2 /* Exponential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exponential.swift; sourceTree = "<group>"; };
-		F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hyperbolic.swift; sourceTree = "<group>"; };
-		F8A1E1C819917B0A009735E2 /* Power.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
-		F8A1E1C919917B0A009735E2 /* Jolt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jolt.h; sourceTree = "<group>"; };
-		F8A1E1CA19917B0A009735E2 /* Trigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigonometric.swift; sourceTree = "<group>"; };
-		F8A1E1D219917C0B009735E2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		F8A1E1D619917C2B009735E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F8AE90FD19D1D9120078C7B2 /* FFT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFT.swift; sourceTree = "<group>"; };
+		DC624E681C55AED40003C653 /* Jolt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Jolt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC624E6B1C55AED40003C653 /* Jolt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Jolt.h; sourceTree = "<group>"; };
+		DC624E6D1C55AED40003C653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC624E721C55AED40003C653 /* JoltTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoltTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC624E791C55AED40003C653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC624E831C55B06C0003C653 /* AccelerateFloatingPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerateFloatingPoint.swift; sourceTree = "<group>"; };
+		DC624E841C55B06C0003C653 /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
+		DC624E851C55B06C0003C653 /* Auxiliary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auxiliary.swift; sourceTree = "<group>"; };
+		DC624E861C55B06C0003C653 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		DC624E871C55B06C0003C653 /* Exponential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exponential.swift; sourceTree = "<group>"; };
+		DC624E881C55B06C0003C653 /* FFT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFT.swift; sourceTree = "<group>"; };
+		DC624E891C55B06C0003C653 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
+		DC624E8A1C55B06C0003C653 /* Hyperbolic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hyperbolic.swift; sourceTree = "<group>"; };
+		DC624E8B1C55B06C0003C653 /* Jolt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jolt.h; sourceTree = "<group>"; };
+		DC624E8C1C55B06C0003C653 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		DC624E8D1C55B06C0003C653 /* Power.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
+		DC624E8E1C55B06C0003C653 /* Trigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigonometric.swift; sourceTree = "<group>"; };
+		DC624E8F1C55B06C0003C653 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		DC624E9D1C55B10E0003C653 /* ArithmeticTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArithmeticTests.swift; path = ../../JoltFork/JoltTests/ArithmeticTests.swift; sourceTree = "<group>"; };
+		DC624E9F1C55B1700003C653 /* Jolt.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Jolt.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DC9BF16F1C4E3D8E00AFDEC2 /* Frameworks */ = {
+		DC624E641C55AED40003C653 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC9BF1771C4E3D8E00AFDEC2 /* Jolt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8A1E1A619917A79009735E2 /* Frameworks */ = {
+		DC624E6F1C55AED40003C653 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A1E1D719917C2B009735E2 /* Foundation.framework in Frameworks */,
-				F8A1E1D519917C25009735E2 /* Accelerate.framework in Frameworks */,
+				DC624E731C55AED40003C653 /* Jolt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DC9BF1731C4E3D8E00AFDEC2 /* Tests */ = {
+		DC624E5E1C55AED40003C653 = {
 			isa = PBXGroup;
 			children = (
-				DC9BF1741C4E3D8E00AFDEC2 /* ArithmeticTests.swift */,
-				DC9BF1761C4E3D8E00AFDEC2 /* Info.plist */,
-			);
-			name = Tests;
-			path = JoltTests;
-			sourceTree = "<group>";
-		};
-		F8A1E1A019917A79009735E2 = {
-			isa = PBXGroup;
-			children = (
-				F8A1E1AC19917A79009735E2 /* Source */,
-				DC9BF1731C4E3D8E00AFDEC2 /* Tests */,
-				F8A1E1D419917C17009735E2 /* Frameworks */,
-				F8A1E1AB19917A79009735E2 /* Products */,
+				DC624E6A1C55AED40003C653 /* Jolt */,
+				DC624E761C55AED40003C653 /* JoltTests */,
+				DC624E691C55AED40003C653 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F8A1E1AB19917A79009735E2 /* Products */ = {
+		DC624E691C55AED40003C653 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8A1E1AA19917A79009735E2 /* Jolt.framework */,
-				DC9BF1721C4E3D8E00AFDEC2 /* JoltTests.xctest */,
+				DC624E681C55AED40003C653 /* Jolt.framework */,
+				DC624E721C55AED40003C653 /* JoltTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8A1E1AC19917A79009735E2 /* Source */ = {
+		DC624E6A1C55AED40003C653 /* Jolt */ = {
 			isa = PBXGroup;
 			children = (
-				F8A1E1C319917B0A009735E2 /* Source */,
-				F8A1E1AD19917A79009735E2 /* Supporting Files */,
+				DC624E821C55B06C0003C653 /* Source */,
+				DC624E6B1C55AED40003C653 /* Jolt.h */,
+				DC624E6D1C55AED40003C653 /* Info.plist */,
+				DC624E9F1C55B1700003C653 /* Jolt.playground */,
 			);
-			name = Source;
-			path = Surge;
+			path = Jolt;
 			sourceTree = "<group>";
 		};
-		F8A1E1AD19917A79009735E2 /* Supporting Files */ = {
+		DC624E761C55AED40003C653 /* JoltTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8A1E1AE19917A79009735E2 /* Info.plist */,
+				DC624E9D1C55B10E0003C653 /* ArithmeticTests.swift */,
+				DC624E791C55AED40003C653 /* Info.plist */,
 			);
-			path = "Supporting Files";
+			path = JoltTests;
 			sourceTree = "<group>";
 		};
-		F8A1E1C319917B0A009735E2 /* Source */ = {
+		DC624E821C55B06C0003C653 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F8A1E1C919917B0A009735E2 /* Jolt.h */,
-				DC9BF1501C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift */,
-				DC9BF1521C4DFD9800AFDEC2 /* Float.swift */,
-				DC9BF1541C4DFDA200AFDEC2 /* Double.swift */,
-				F8A1E1C419917B0A009735E2 /* Arithmetic.swift */,
-				DC9BF1461C4DCA6E00AFDEC2 /* Vector.swift */,
-				F8A1E1C819917B0A009735E2 /* Power.swift */,
-				F8A1E1C519917B0A009735E2 /* Auxiliary.swift */,
-				F8A1E1C619917B0A009735E2 /* Exponential.swift */,
-				F8AE90FD19D1D9120078C7B2 /* FFT.swift */,
-				F8A1E1CA19917B0A009735E2 /* Trigonometric.swift */,
-				F8A1E1C719917B0A009735E2 /* Hyperbolic.swift */,
-				E65C5BE319FF9CF600149FF1 /* Matrix.swift */,
+				DC624E831C55B06C0003C653 /* AccelerateFloatingPoint.swift */,
+				DC624E841C55B06C0003C653 /* Arithmetic.swift */,
+				DC624E851C55B06C0003C653 /* Auxiliary.swift */,
+				DC624E861C55B06C0003C653 /* Double.swift */,
+				DC624E871C55B06C0003C653 /* Exponential.swift */,
+				DC624E881C55B06C0003C653 /* FFT.swift */,
+				DC624E891C55B06C0003C653 /* Float.swift */,
+				DC624E8A1C55B06C0003C653 /* Hyperbolic.swift */,
+				DC624E8B1C55B06C0003C653 /* Jolt.h */,
+				DC624E8C1C55B06C0003C653 /* Matrix.swift */,
+				DC624E8D1C55B06C0003C653 /* Power.swift */,
+				DC624E8E1C55B06C0003C653 /* Trigonometric.swift */,
+				DC624E8F1C55B06C0003C653 /* Vector.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
 		};
-		F8A1E1D419917C17009735E2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F8A1E1D619917C2B009735E2 /* Foundation.framework */,
-				F8A1E1D219917C0B009735E2 /* Accelerate.framework */,
-			);
-			name = Frameworks;
-			path = "Surge/Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F8A1E1A719917A79009735E2 /* Headers */ = {
+		DC624E651C55AED40003C653 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8A1E1D019917B0A009735E2 /* Jolt.h in Headers */,
+				DC624E6C1C55AED40003C653 /* Jolt.h in Headers */,
+				DC624E981C55B06C0003C653 /* Jolt.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DC9BF1711C4E3D8E00AFDEC2 /* JoltTests */ = {
+		DC624E671C55AED40003C653 /* Jolt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC9BF17A1C4E3D8E00AFDEC2 /* Build configuration list for PBXNativeTarget "JoltTests" */;
+			buildConfigurationList = DC624E7C1C55AED40003C653 /* Build configuration list for PBXNativeTarget "Jolt" */;
 			buildPhases = (
-				DC9BF16E1C4E3D8E00AFDEC2 /* Sources */,
-				DC9BF16F1C4E3D8E00AFDEC2 /* Frameworks */,
-				DC9BF1701C4E3D8E00AFDEC2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DC9BF1791C4E3D8E00AFDEC2 /* PBXTargetDependency */,
-			);
-			name = JoltTests;
-			productName = JoltTests;
-			productReference = DC9BF1721C4E3D8E00AFDEC2 /* JoltTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F8A1E1A919917A79009735E2 /* Jolt */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8A1E1BD19917A79009735E2 /* Build configuration list for PBXNativeTarget "Jolt" */;
-			buildPhases = (
-				F8A1E1A519917A79009735E2 /* Sources */,
-				F8A1E1A619917A79009735E2 /* Frameworks */,
-				F8A1E1A719917A79009735E2 /* Headers */,
-				F8A1E1A819917A79009735E2 /* Resources */,
+				DC624E631C55AED40003C653 /* Sources */,
+				DC624E641C55AED40003C653 /* Frameworks */,
+				DC624E651C55AED40003C653 /* Headers */,
+				DC624E661C55AED40003C653 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Jolt;
-			productName = Surge;
-			productReference = F8A1E1AA19917A79009735E2 /* Jolt.framework */;
+			productName = Jolt;
+			productReference = DC624E681C55AED40003C653 /* Jolt.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		DC624E711C55AED40003C653 /* JoltTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC624E7F1C55AED40003C653 /* Build configuration list for PBXNativeTarget "JoltTests" */;
+			buildPhases = (
+				DC624E6E1C55AED40003C653 /* Sources */,
+				DC624E6F1C55AED40003C653 /* Frameworks */,
+				DC624E701C55AED40003C653 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC624E751C55AED40003C653 /* PBXTargetDependency */,
+			);
+			name = JoltTests;
+			productName = JoltTests;
+			productReference = DC624E721C55AED40003C653 /* JoltTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F8A1E1A119917A79009735E2 /* Project object */ = {
+		DC624E5F1C55AED40003C653 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = "Mattt Thompson";
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Tyler Cloutier";
 				TargetAttributes = {
-					DC9BF1711C4E3D8E00AFDEC2 = {
+					DC624E671C55AED40003C653 = {
 						CreatedOnToolsVersion = 7.2;
 					};
-					F8A1E1A919917A79009735E2 = {
-						CreatedOnToolsVersion = 6.0;
+					DC624E711C55AED40003C653 = {
+						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
-			buildConfigurationList = F8A1E1A419917A79009735E2 /* Build configuration list for PBXProject "Jolt" */;
+			buildConfigurationList = DC624E621C55AED40003C653 /* Build configuration list for PBXProject "Jolt" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F8A1E1A019917A79009735E2;
-			productRefGroup = F8A1E1AB19917A79009735E2 /* Products */;
+			mainGroup = DC624E5E1C55AED40003C653;
+			productRefGroup = DC624E691C55AED40003C653 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8A1E1A919917A79009735E2 /* Jolt */,
-				DC9BF1711C4E3D8E00AFDEC2 /* JoltTests */,
+				DC624E671C55AED40003C653 /* Jolt */,
+				DC624E711C55AED40003C653 /* JoltTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DC9BF1701C4E3D8E00AFDEC2 /* Resources */ = {
+		DC624E661C55AED40003C653 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8A1E1A819917A79009735E2 /* Resources */ = {
+		DC624E701C55AED40003C653 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -262,75 +240,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DC9BF16E1C4E3D8E00AFDEC2 /* Sources */ = {
+		DC624E631C55AED40003C653 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC9BF1751C4E3D8E00AFDEC2 /* ArithmeticTests.swift in Sources */,
+				DC624E901C55B06C0003C653 /* AccelerateFloatingPoint.swift in Sources */,
+				DC624E911C55B06C0003C653 /* Arithmetic.swift in Sources */,
+				DC624E991C55B06C0003C653 /* Matrix.swift in Sources */,
+				DC624E951C55B06C0003C653 /* FFT.swift in Sources */,
+				DC624E961C55B06C0003C653 /* Float.swift in Sources */,
+				DC624E971C55B06C0003C653 /* Hyperbolic.swift in Sources */,
+				DC624E931C55B06C0003C653 /* Double.swift in Sources */,
+				DC624E9A1C55B06C0003C653 /* Power.swift in Sources */,
+				DC624E9B1C55B06C0003C653 /* Trigonometric.swift in Sources */,
+				DC624E921C55B06C0003C653 /* Auxiliary.swift in Sources */,
+				DC624E9C1C55B06C0003C653 /* Vector.swift in Sources */,
+				DC624E941C55B06C0003C653 /* Exponential.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F8A1E1A519917A79009735E2 /* Sources */ = {
+		DC624E6E1C55AED40003C653 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC9BF1531C4DFD9800AFDEC2 /* Float.swift in Sources */,
-				F8A1E1D119917B0A009735E2 /* Trigonometric.swift in Sources */,
-				F8A1E1CE19917B0A009735E2 /* Hyperbolic.swift in Sources */,
-				F8A1E1CC19917B0A009735E2 /* Auxiliary.swift in Sources */,
-				F8A1E1CF19917B0A009735E2 /* Power.swift in Sources */,
-				E65C5BE419FF9CF600149FF1 /* Matrix.swift in Sources */,
-				F8AE90FE19D1D9120078C7B2 /* FFT.swift in Sources */,
-				F8A1E1CD19917B0A009735E2 /* Exponential.swift in Sources */,
-				DC9BF1471C4DCA6E00AFDEC2 /* Vector.swift in Sources */,
-				F8A1E1CB19917B0A009735E2 /* Arithmetic.swift in Sources */,
-				DC9BF1551C4DFDA200AFDEC2 /* Double.swift in Sources */,
-				DC9BF1511C4DFB9E00AFDEC2 /* AccelerateFloatingPoint.swift in Sources */,
+				DC624E9E1C55B10E0003C653 /* ArithmeticTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DC9BF1791C4E3D8E00AFDEC2 /* PBXTargetDependency */ = {
+		DC624E751C55AED40003C653 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F8A1E1A919917A79009735E2 /* Jolt */;
-			targetProxy = DC9BF1781C4E3D8E00AFDEC2 /* PBXContainerItemProxy */;
+			target = DC624E671C55AED40003C653 /* Jolt */;
+			targetProxy = DC624E741C55AED40003C653 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		DC9BF17B1C4E3D8E00AFDEC2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = fast;
-				INFOPLIST_FILE = JoltTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Hungrosity.JoltTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-			};
-			name = Debug;
-		};
-		DC9BF17C1C4E3D8E00AFDEC2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = JoltTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Hungrosity.JoltTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-			};
-			name = Release;
-		};
-		F8A1E1BB19917A79009735E2 /* Debug */ = {
+		DC624E7A1C55AED40003C653 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -350,23 +298,24 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -377,7 +326,7 @@
 			};
 			name = Debug;
 		};
-		F8A1E1BC19917A79009735E2 /* Release */ = {
+		DC624E7B1C55AED40003C653 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -395,18 +344,20 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -416,69 +367,89 @@
 			};
 			name = Release;
 		};
-		F8A1E1BE19917A79009735E2 /* Debug */ = {
+		DC624E7D1C55AED40003C653 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				INFOPLIST_FILE = Jolt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theartofengineering.Jolt;
-				PRODUCT_NAME = Jolt;
+				PRODUCT_BUNDLE_IDENTIFIER = TheArtOfEngineering.Jolt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		F8A1E1BF19917A79009735E2 /* Release */ = {
+		DC624E7E1C55AED40003C653 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				INFOPLIST_FILE = Jolt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theartofengineering.Jolt;
-				PRODUCT_NAME = Jolt;
+				PRODUCT_BUNDLE_IDENTIFIER = TheArtOfEngineering.Jolt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DC624E801C55AED40003C653 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JoltTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TheArtOfEngineering.JoltTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC624E811C55AED40003C653 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JoltTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TheArtOfEngineering.JoltTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DC9BF17A1C4E3D8E00AFDEC2 /* Build configuration list for PBXNativeTarget "JoltTests" */ = {
+		DC624E621C55AED40003C653 /* Build configuration list for PBXProject "Jolt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC9BF17B1C4E3D8E00AFDEC2 /* Debug */,
-				DC9BF17C1C4E3D8E00AFDEC2 /* Release */,
+				DC624E7A1C55AED40003C653 /* Debug */,
+				DC624E7B1C55AED40003C653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8A1E1A419917A79009735E2 /* Build configuration list for PBXProject "Jolt" */ = {
+		DC624E7C1C55AED40003C653 /* Build configuration list for PBXNativeTarget "Jolt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F8A1E1BB19917A79009735E2 /* Debug */,
-				F8A1E1BC19917A79009735E2 /* Release */,
+				DC624E7D1C55AED40003C653 /* Debug */,
+				DC624E7E1C55AED40003C653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8A1E1BD19917A79009735E2 /* Build configuration list for PBXNativeTarget "Jolt" */ = {
+		DC624E7F1C55AED40003C653 /* Build configuration list for PBXNativeTarget "JoltTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F8A1E1BE19917A79009735E2 /* Debug */,
-				F8A1E1BF19917A79009735E2 /* Release */,
+				DC624E801C55AED40003C653 /* Debug */,
+				DC624E811C55AED40003C653 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F8A1E1A119917A79009735E2 /* Project object */;
+	rootObject = DC624E5F1C55AED40003C653 /* Project object */;
 }

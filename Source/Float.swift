@@ -467,7 +467,6 @@ extension Float: AccelerateFloatingPoint {
         return results
     }
     
-    // MARK: -
     
     // MARK: Radians to Degrees
     
@@ -485,6 +484,99 @@ extension Float: AccelerateFloatingPoint {
         var results = [Float](count: x.count, repeatedValue: 0.0)
         let divisor = [Float](count: x.count, repeatedValue: Float(180.0 / M_PI))
         vvdivf(&results, x, divisor, [Int32(x.count)])
+        
+        return results
+    }
+    
+    // MARK: - Matrix Operations
+    
+    public static func add(x: Matrix<Float>, y: Matrix<Float>) -> Matrix<Float> {
+        precondition(x.rows == y.rows && x.columns == y.columns, "Matrix dimensions not compatible with addition")
+        
+        var results = y
+        cblas_saxpy(Int32(x.grid.count), 1.0, x.grid, 1, &(results.grid), 1)
+        
+        return results
+    }
+    
+    public static func add(x: Matrix<Float>, alpha: Float) -> Matrix<Float> {
+        
+        var results = x
+        results.grid = [Float](count: results.grid.count, repeatedValue: alpha)
+        cblas_saxpy(Int32(x.grid.count), 1.0, x.grid, 1, &(results.grid), 1)
+        
+        return results
+    }
+    
+    public static func sub(x: Matrix<Float>, y: Matrix<Float>) -> Matrix<Float> {
+        
+        var results = y
+        cblas_saxpy(Int32(x.grid.count), -1.0, x.grid, 1, &(results.grid), 1)
+        
+        return results
+    }
+    
+    public static func sub(x: Matrix<Float>, alpha: Float) -> Matrix<Float> {
+        
+        var results = x
+        results.grid = [Float](count: results.grid.count, repeatedValue: alpha)
+        cblas_saxpy(Int32(x.grid.count), -1.0, x.grid, 1, &(results.grid), 1)
+        
+        return results
+    }
+    
+    public static func mul(x: Matrix<Float>, y: Matrix<Float>) -> Matrix<Float> {
+        precondition(x.columns == y.rows, "Matrix dimensions not compatible with multiplication")
+        
+        var results = Matrix<Float>(rows: x.rows, columns: y.columns, repeatedValue: 0.0)
+        cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, Int32(x.rows), Int32(y.columns), Int32(x.columns), 1.0, x.grid, Int32(x.columns), y.grid, Int32(y.columns), 0.0, &(results.grid), Int32(results.columns))
+        
+        return results
+    }
+    
+    public static func mul(x: Matrix<Float>, alpha: Float) -> Matrix<Float> {
+        var results = x
+        cblas_sscal(Int32(x.grid.count), alpha, &(results.grid), 1)
+        
+        return results
+    }
+    
+    public static func div(x: Matrix<Float>, y: Matrix<Float>) -> Matrix<Float> {
+        let yInv = y′
+        precondition(x.columns == yInv.rows, "Matrix dimensions not compatible")
+        return Float.mul(x, y: yInv)
+    }
+    
+    public static func div(x: Matrix<Float>, alpha: Float) -> Matrix<Float> {
+        var results = x
+        let y = [Float](count: x.grid.count, repeatedValue: alpha)
+        vvdivf(&results.grid, x.grid, y, [Int32(x.grid.count)])
+        
+        return results
+    }
+    
+    public static func inv(x : Matrix<Float>) -> Matrix<Float> {
+        precondition(x.rows == x.columns, "Matrix must be square")
+        
+        var results = x
+        
+        var ipiv = [__CLPK_integer](count: x.rows * x.rows, repeatedValue: 0)
+        var lwork = __CLPK_integer(x.columns * x.columns)
+        var work = [CFloat](count: Int(lwork), repeatedValue: 0.0)
+        var error: __CLPK_integer = 0
+        var nc = __CLPK_integer(x.columns)
+        
+        sgetrf_(&nc, &nc, &(results.grid), &nc, &ipiv, &error)
+        sgetri_(&nc, &(results.grid), &nc, &ipiv, &work, &lwork, &error)
+        
+        assert(error == 0, "Matrix not invertible")
+        
+        return results
+    }
+    
+    public static func transpose(x: Matrix<Float>) -> Matrix<Float> {
+        var results = Matrix<Float>(rows: x.columns, columns: x.rows, repeatedValue: 0.0)
+        vDSP_mtrans(x.grid, 1, &(results.grid), 1, vDSP_Length(results.rows), vDSP_Length(results.columns))
         
         return results
     }

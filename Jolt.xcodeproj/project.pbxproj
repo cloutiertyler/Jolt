@@ -117,17 +117,17 @@
 			isa = PBXGroup;
 			children = (
 				DC624E831C55B06C0003C653 /* AccelerateFloatingPoint.swift */,
+				DC624E891C55B06C0003C653 /* Float.swift */,
+				DC624E861C55B06C0003C653 /* Double.swift */,
 				DC624E841C55B06C0003C653 /* Arithmetic.swift */,
 				DC624E851C55B06C0003C653 /* Auxiliary.swift */,
-				DC624E861C55B06C0003C653 /* Double.swift */,
+				DC624E8F1C55B06C0003C653 /* Vector.swift */,
 				DC624E871C55B06C0003C653 /* Exponential.swift */,
 				DC624E881C55B06C0003C653 /* FFT.swift */,
-				DC624E891C55B06C0003C653 /* Float.swift */,
 				DC624E8A1C55B06C0003C653 /* Hyperbolic.swift */,
-				DC624E8C1C55B06C0003C653 /* Matrix.swift */,
 				DC624E8D1C55B06C0003C653 /* Power.swift */,
 				DC624E8E1C55B06C0003C653 /* Trigonometric.swift */,
-				DC624E8F1C55B06C0003C653 /* Vector.swift */,
+				DC624E8C1C55B06C0003C653 /* Matrix.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;

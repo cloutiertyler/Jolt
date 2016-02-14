@@ -164,5 +164,27 @@ public protocol AccelerateFloatingPoint: FloatingPointType, FloatLiteralConverti
     static func rad2deg(x: [Self]) -> [Self]
     
     static func deg2rad(x: [Self]) -> [Self]
+    
+    // MARK: - Matrix Operations
+    
+    static func add(x: Matrix<Self>, y: Matrix<Self>) -> Matrix<Self>
+    
+    static func add(x: Matrix<Self>, alpha: Self) -> Matrix<Self>
+    
+    static func sub(x: Matrix<Self>, y: Matrix<Self>) -> Matrix<Self>
+    
+    static func sub(x: Matrix<Self>, alpha: Self) -> Matrix<Self>
+    
+    static func mul(x: Matrix<Self>, y: Matrix<Self>) -> Matrix<Self>
+    
+    static func mul(x: Matrix<Self>, alpha: Self) -> Matrix<Self>
+
+    static func div(x: Matrix<Self>, y: Matrix<Self>) -> Matrix<Self>
+    
+    static func div(x: Matrix<Self>, alpha: Self) -> Matrix<Self>
+
+    static func inv(x: Matrix<Self>) -> Matrix<Self>
+    
+    static func transpose(x: Matrix<Self>) -> Matrix<Self>
 
 }

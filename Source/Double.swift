@@ -335,7 +335,7 @@ extension Double: AccelerateFloatingPoint {
         var imaginary = [Double](count: input.count, repeatedValue: 0.0)
         var splitComplex = DSPDoubleSplitComplex(realp: &real, imagp: &imaginary)
         
-        let length = vDSP_Length(Darwin.floor(Darwin.log2(Float(input.count))))
+        let length = vDSP_Length(Darwin.floor(Darwin.log2(Double(input.count))))
         let radix = FFTRadix(kFFTRadix2)
         let weights = vDSP_create_fftsetupD(length, radix)
         vDSP_fft_zipD(weights, &splitComplex, 1, length, FFTDirection(FFT_FORWARD))
@@ -469,7 +469,6 @@ extension Double: AccelerateFloatingPoint {
         return results
     }
     
-    // MARK: -
     
     // MARK: Radians to Degrees
     
@@ -490,5 +489,99 @@ extension Double: AccelerateFloatingPoint {
         
         return results
     }
+    
+    // MARK: - Matrix Operations
+    
+    public static func add(x: Matrix<Double>, y: Matrix<Double>) -> Matrix<Double> {
+        precondition(x.rows == y.rows && x.columns == y.columns, "Matrix dimensions not compatible with addition")
+        
+        var results = y
+        cblas_daxpy(Int32(x.grid.count), 1.0, x.grid, 1, &(results.grid), 1)
+        
+        return results
+    }
+    
+    public static func add(x: Matrix<Double>, alpha: Double) -> Matrix<Double> {
+        
+        var results = x
+        results.grid = [Double](count: results.grid.count, repeatedValue: alpha)
+        cblas_daxpy(Int32(x.grid.count), 1.0, x.grid, 1, &(results.grid), 1)
+        
+        return results
+    }
+    
+    public static func sub(x: Matrix<Double>, y: Matrix<Double>) -> Matrix<Double> {
+        
+        var results = y
+        cblas_daxpy(Int32(x.grid.count), -1.0, x.grid, 1, &(results.grid), 1)
+        
+        return results
+    }
+    
+    public static func sub(x: Matrix<Double>, alpha: Double) -> Matrix<Double> {
+        
+        var results = x
+        results.grid = [Double](count: results.grid.count, repeatedValue: alpha)
+        cblas_daxpy(Int32(x.grid.count), -1.0, x.grid, 1, &(results.grid), 1)
+        
+        return results
+    }
+    
+    public static func mul(x: Matrix<Double>, y: Matrix<Double>) -> Matrix<Double> {
+        precondition(x.columns == y.rows, "Matrix dimensions not compatible with multiplication")
+        
+        var results = Matrix<Double>(rows: x.rows, columns: y.columns, repeatedValue: 0.0)
+        cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, Int32(x.rows), Int32(y.columns), Int32(x.columns), 1.0, x.grid, Int32(x.columns), y.grid, Int32(y.columns), 0.0, &(results.grid), Int32(results.columns))
+        
+        return results
+    }
+    
+    public static func mul(x: Matrix<Double>, alpha: Double) -> Matrix<Double> {
+        var results = x
+        cblas_dscal(Int32(x.grid.count), alpha, &(results.grid), 1)
+        
+        return results
+    }
+    
+    public static func div(x: Matrix<Double>, y: Matrix<Double>) -> Matrix<Double> {
+        let yInv = y′
+        precondition(x.columns == yInv.rows, "Matrix dimensions not compatible")
+        return mul(x, y: yInv)
+    }
+    
+    public static func div(x: Matrix<Double>, alpha: Double) -> Matrix<Double> {
+        var results = x
+        let y = [Double](count: x.grid.count, repeatedValue: alpha)
+        vvdiv(&results.grid, x.grid, y, [Int32(x.grid.count)])
+        
+        return results
+    }
+    
+    public static func inv(x : Matrix<Double>) -> Matrix<Double> {
+        precondition(x.rows == x.columns, "Matrix must be square")
+        
+        var results = x
+        
+        var ipiv = [__CLPK_integer](count: x.rows * x.rows, repeatedValue: 0)
+        var lwork = __CLPK_integer(x.columns * x.columns)
+        var work = [CDouble](count: Int(lwork), repeatedValue: 0.0)
+        var error: __CLPK_integer = 0
+        var nc = __CLPK_integer(x.columns)
+        
+        dgetrf_(&nc, &nc, &(results.grid), &nc, &ipiv, &error)
+        dgetri_(&nc, &(results.grid), &nc, &ipiv, &work, &lwork, &error)
+        
+        assert(error == 0, "Matrix not invertible")
+        
+        return results
+    }
+    
+    public static func transpose(x: Matrix<Double>) -> Matrix<Double> {
+        var results = Matrix<Double>(rows: x.columns, columns: x.rows, repeatedValue: 0.0)
+        vDSP_mtransD(x.grid, 1, &(results.grid), 1, vDSP_Length(results.rows), vDSP_Length(results.columns))
+        
+        return results
+    }
+
     
 }

@@ -22,18 +22,29 @@
 
 import Accelerate
 
-public struct Matrix<T where T: FloatingPointType, T: FloatLiteralConvertible> {
+public struct Matrix<T: AccelerateFloatingPoint> {
     public typealias Element = T
 
     public let rows: Int
     public let columns: Int
     public var grid: [Element]
-
-    public init(rows: Int, columns: Int, repeatedValue: Element) {
+    
+    public init(rows: Int, columns: Int, contents: [Element]) {
+        precondition(
+            rows * columns == contents.count,
+            "Rows and columns do not fit the shape of the contents."
+        )
         self.rows = rows
         self.columns = columns
+        self.grid = contents
+    }
 
-        self.grid = [Element](count: rows * columns, repeatedValue: repeatedValue)
+    public init(rows: Int, columns: Int, repeatedValue: Element) {
+        self.init(
+            rows: rows,
+            columns: columns,
+            contents: [Element](count: rows * columns, repeatedValue: repeatedValue)
+        )
     }
 
     public init(_ contents: [[Element]]) {
@@ -112,161 +123,100 @@ extension Matrix: SequenceType {
     }
 }
 
-// MARK: -
+// MARK: - Matrix Global Functions
 
-public func add(x: Matrix<Float>, y: Matrix<Float>) -> Matrix<Float> {
-    precondition(x.rows == y.rows && x.columns == y.columns, "Matrix dimensions not compatible with addition")
-
-    var results = y
-    cblas_saxpy(Int32(x.grid.count), 1.0, x.grid, 1, &(results.grid), 1)
-
-    return results
+public func add<T: AccelerateFloatingPoint>(x: Matrix<T>, y: Matrix<T>) -> Matrix<T> {
+    return T.add(x, y: y)
 }
 
-public func add(x: Matrix<Double>, y: Matrix<Double>) -> Matrix<Double> {
-    precondition(x.rows == y.rows && x.columns == y.columns, "Matrix dimensions not compatible with addition")
-
-    var results = y
-    cblas_daxpy(Int32(x.grid.count), 1.0, x.grid, 1, &(results.grid), 1)
-
-    return results
+public func add<T: AccelerateFloatingPoint>(x: Matrix<T>, alpha: T) -> Matrix<T> {
+    return T.add(x, alpha: alpha)
 }
 
-public func mul(alpha: Float, x: Matrix<Float>) -> Matrix<Float> {
-    var results = x
-    cblas_sscal(Int32(x.grid.count), alpha, &(results.grid), 1)
-
-    return results
+public func sub<T: AccelerateFloatingPoint>(x: Matrix<T>, y: Matrix<T>) -> Matrix<T> {
+    return T.sub(x, y: y)
 }
 
-public func mul(alpha: Double, x: Matrix<Double>) -> Matrix<Double> {
-    var results = x
-    cblas_dscal(Int32(x.grid.count), alpha, &(results.grid), 1)
-
-    return results
+public func sub<T: AccelerateFloatingPoint>(x: Matrix<T>, alpha: T) -> Matrix<T> {
+    return T.sub(x, alpha: alpha)
 }
 
-public func mul(x: Matrix<Float>, y: Matrix<Float>) -> Matrix<Float> {
-    precondition(x.columns == y.rows, "Matrix dimensions not compatible with multiplication")
-
-    var results = Matrix<Float>(rows: x.rows, columns: y.columns, repeatedValue: 0.0)
-    cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, Int32(x.rows), Int32(y.columns), Int32(x.columns), 1.0, x.grid, Int32(x.columns), y.grid, Int32(y.columns), 0.0, &(results.grid), Int32(results.columns))
-
-    return results
+public func multiply<T: AccelerateFloatingPoint>(x: Matrix<T>, y: Matrix<T>) -> Matrix<T> {
+    return T.mul(x, y: y)
 }
 
-public func mul(x: Matrix<Double>, y: Matrix<Double>) -> Matrix<Double> {
-    precondition(x.columns == y.rows, "Matrix dimensions not compatible with multiplication")
-
-    var results = Matrix<Double>(rows: x.rows, columns: y.columns, repeatedValue: 0.0)
-    cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, Int32(x.rows), Int32(y.columns), Int32(x.columns), 1.0, x.grid, Int32(x.columns), y.grid, Int32(y.columns), 0.0, &(results.grid), Int32(results.columns))
-
-    return results
+public func multiply<T: AccelerateFloatingPoint>(x: Matrix<T>, alpha: T) -> Matrix<T> {
+    return T.mul(x, alpha: alpha)
 }
 
-public func div(x: Matrix<Double>, y: Matrix<Double>) -> Matrix<Double> {
-    let yInv = y′
-    precondition(x.columns == yInv.rows, "Matrix dimensions not compatible")
-    return mul(x, y: yInv)
+public func divide<T: AccelerateFloatingPoint>(x: Matrix<T>, by y: Matrix<T>) -> Matrix<T> {
+    return T.div(x, y: y)
 }
 
-public func div(x: Matrix<Float>, y: Matrix<Float>) -> Matrix<Float> {
-    let yInv = y′
-    precondition(x.columns == yInv.rows, "Matrix dimensions not compatible")
-    return mul(x, y: yInv)
+public func divide<T: AccelerateFloatingPoint>(x: Matrix<T>, by alpha: T) -> Matrix<T> {
+    return T.div(x, alpha: alpha)
 }
 
-public func inv(x : Matrix<Float>) -> Matrix<Float> {
-    precondition(x.rows == x.columns, "Matrix must be square")
-
-    var results = x
-
-    var ipiv = [__CLPK_integer](count: x.rows * x.rows, repeatedValue: 0)
-    var lwork = __CLPK_integer(x.columns * x.columns)
-    var work = [CFloat](count: Int(lwork), repeatedValue: 0.0)
-    var error: __CLPK_integer = 0
-    var nc = __CLPK_integer(x.columns)
-
-    sgetrf_(&nc, &nc, &(results.grid), &nc, &ipiv, &error)
-    sgetri_(&nc, &(results.grid), &nc, &ipiv, &work, &lwork, &error)
-
-    assert(error == 0, "Matrix not invertible")
-
-    return results
+public func invert<T: AccelerateFloatingPoint>(x: Matrix<T>) -> Matrix<T> {
+    return T.inv(x)
 }
 
-public func inv(x : Matrix<Double>) -> Matrix<Double> {
-    precondition(x.rows == x.columns, "Matrix must be square")
-
-    var results = x
-
-    var ipiv = [__CLPK_integer](count: x.rows * x.rows, repeatedValue: 0)
-    var lwork = __CLPK_integer(x.columns * x.columns)
-    var work = [CDouble](count: Int(lwork), repeatedValue: 0.0)
-    var error: __CLPK_integer = 0
-    var nc = __CLPK_integer(x.columns)
-
-    dgetrf_(&nc, &nc, &(results.grid), &nc, &ipiv, &error)
-    dgetri_(&nc, &(results.grid), &nc, &ipiv, &work, &lwork, &error)
-
-    assert(error == 0, "Matrix not invertible")
-
-    return results
+public func transpose<T: AccelerateFloatingPoint>(x: Matrix<T>) -> Matrix<T> {
+    return T.transpose(x)
 }
 
-public func transpose(x: Matrix<Float>) -> Matrix<Float> {
-    var results = Matrix<Float>(rows: x.columns, columns: x.rows, repeatedValue: 0.0)
-    vDSP_mtrans(x.grid, 1, &(results.grid), 1, vDSP_Length(results.rows), vDSP_Length(results.columns))
-
-    return results
-}
-
-public func transpose(x: Matrix<Double>) -> Matrix<Double> {
-    var results = Matrix<Double>(rows: x.columns, columns: x.rows, repeatedValue: 0.0)
-    vDSP_mtransD(x.grid, 1, &(results.grid), 1, vDSP_Length(results.rows), vDSP_Length(results.columns))
-
-    return results
-}
 
 // MARK: - Operators
 
-public func + (lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
-    return add(lhs, y: rhs)
+public func +<T: AccelerateFloatingPoint> (lhs: Matrix<T>, rhs: Matrix<T>) -> Matrix<T> {
+    return T.add(lhs, y: rhs)
 }
 
-public func + (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
-    return add(lhs, y: rhs)
+public func +<T: AccelerateFloatingPoint> (lhs: T, rhs: Matrix<T>) -> Matrix<T> {
+    return T.add(rhs, alpha: lhs)
 }
 
-public func * (lhs: Float, rhs: Matrix<Float>) -> Matrix<Float> {
-    return mul(lhs, x: rhs)
+public func +<T: AccelerateFloatingPoint> (lhs: Matrix<T>, rhs: T) -> Matrix<T> {
+    return T.add(lhs, alpha: rhs)
 }
 
-public func * (lhs: Double, rhs: Matrix<Double>) -> Matrix<Double> {
-    return mul(lhs, x: rhs)
+public func -<T: AccelerateFloatingPoint> (lhs: Matrix<T>, rhs: Matrix<T>) -> Matrix<T> {
+    return T.sub(lhs, y: rhs)
 }
 
-public func * (lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
-    return mul(lhs, y: rhs)
+public func -<T: AccelerateFloatingPoint> (lhs: T, rhs: Matrix<T>) -> Matrix<T> {
+    return T.sub(rhs, alpha: lhs)
 }
 
-public func * (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
-    return mul(lhs, y: rhs)
+public func -<T: AccelerateFloatingPoint> (lhs: Matrix<T>, rhs: T) -> Matrix<T> {
+    return T.sub(lhs, alpha: rhs)
 }
 
-public func / (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
-    return div(lhs, y: rhs)
+public func *<T: AccelerateFloatingPoint> (lhs: Matrix<T>, rhs: Matrix<T>) -> Matrix<T> {
+    return T.mul(lhs, y: rhs)
 }
 
-public func / (lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
-    return div(lhs, y: rhs)
+public func *<T: AccelerateFloatingPoint> (lhs: T, rhs: Matrix<T>) -> Matrix<T> {
+    return T.mul(rhs, alpha: lhs)
+}
+
+public func *<T: AccelerateFloatingPoint> (lhs: Matrix<T>, rhs: T) -> Matrix<T> {
+    return T.mul(lhs, alpha: rhs)
+}
+
+public func /<T: AccelerateFloatingPoint> (lhs: Matrix<T>, rhs: Matrix<T>) -> Matrix<T> {
+    return T.div(lhs, y: rhs)
+}
+
+public func /<T: AccelerateFloatingPoint> (lhs: T, rhs: Matrix<T>) -> Matrix<T> {
+    return T.div(rhs, alpha: lhs)
+}
+
+public func /<T: AccelerateFloatingPoint> (lhs: Matrix<T>, rhs: T) -> Matrix<T> {
+    return T.div(lhs, alpha: rhs)
 }
 
 postfix operator ′ {}
-public postfix func ′ (value: Matrix<Float>) -> Matrix<Float> {
-    return transpose(value)
-}
-
-public postfix func ′ (value: Matrix<Double>) -> Matrix<Double> {
+public postfix func ′<T: AccelerateFloatingPoint> (value: Matrix<T>) -> Matrix<T> {
     return transpose(value)
 }

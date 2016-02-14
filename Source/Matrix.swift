@@ -48,6 +48,10 @@ public struct Matrix<T: AccelerateFloatingPoint> {
     }
 
     public init(_ contents: [[Element]]) {
+        let isCorrectShape = !contents.contains { row -> Bool in
+            return row.count != contents[0].count
+        }
+        precondition(isCorrectShape, "Rows are not the correct shape.")
         let m: Int = contents.count
         let n: Int = contents[0].count
         let repeatedValue: Element = 0.0

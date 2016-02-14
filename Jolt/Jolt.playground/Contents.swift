@@ -12,3 +12,11 @@ sum = numbers.reduce(0.0, combine: +)
 sum = Jolt.sum(numbers)
 sum = numbers.sum()
 
+
+let y = Matrix(
+    [[0, 0],
+     [1, 3],
+     [1, 1]]
+)
+
+print(y)
